@@ -1,0 +1,26 @@
+h1.ldi{
+    background-color: royalblue;
+    color:white;
+    padding-left: 2%;
+}
+h2.ldi{
+    background-color: royalblue;
+    color:white;
+    padding-left: 2%;
+}
+h3.ldi{
+    color:royalblue;
+    padding-left: 2%;
+}
+p.ldi{
+    background-color: rgb(192, 247, 242);
+    border: dashed blue 2px;
+}
+
+font{
+    font-size: 16px;
+    font-weight: bold;
+}
+table{
+    padding: 1%;
+}

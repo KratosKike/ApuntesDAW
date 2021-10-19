@@ -1,0 +1,99 @@
+div.cuaderno a:after{
+    content:url('imagenes/link.png');
+    padding-left:1em;
+}
+
+div.bloqueexplicacion > ol {
+    border: dotted 0.1em black;
+    background-color:white;
+    padding-top:0.5em;
+    padding-bottom:0.5em;
+}
+
+div.bloqueexplicacion > ul {
+    border: dashed 0.1em blue;
+    background-color:white;
+    padding-top:0.5em;
+    padding-bottom:0.5em;
+}
+
+div.bloqueexplicacion dd {
+    border: dotted 0.1em black;
+    padding-top:0.5em;
+    padding-bottom:0.5em;
+    background-color: #ffd6d6;
+}
+
+html{
+    background-color: rgb(204, 204, 204);
+}
+
+.cabecera{
+    background-color: blue;
+    color: white;
+    text-align: center;
+}
+
+.lateral{
+    float: left;
+    background-color: blue;
+    width: 20%;
+    overflow:auto;
+    margin-right: 2px;
+}
+
+img{
+    margin-left: auto; 
+    margin-right: auto;
+    display: block;
+}
+
+.logo{
+
+    
+    background-color: white;
+    
+  
+}
+
+li{
+    color: yellow;
+}
+a{
+    color: white;
+}
+.central{
+    padding-left: 20%;
+}
+.aviso{
+    background-color: rgb(160, 235, 235);
+    padding: 1%;
+    margin: 1%;
+    border: double 5px red;
+}
+.tituloaviso{
+    text-align: center;
+    font-size: 36px;
+    font-weight: bold;
+    background-image:url(imagenes/construccion.png),url(imagenes/construccion.png);
+    background-repeat:no-repeat,no-repeat;
+    background-position: left, right;
+    padding: 3%;
+    margin-left:12%;
+    margin-right:12%;
+    
+}
+
+.cuerpoaviso{
+    text-align: center;
+    font-size: 16px;
+}
+.pie{
+    background-color: blue;
+    text-align: right;
+    color: yellow;
+    font-size: 16px;
+    width: 100%;
+    clear: both;
+    
+}
