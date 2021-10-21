@@ -4,7 +4,7 @@ div.cuaderno a:after{
 }
 
 div.bloqueexplicacion > ol {
-    border: dotted 0.1em black;
+    border: dashed 0.1em blue;
     background-color:white;
     padding-top:0.5em;
     padding-bottom:0.5em;
@@ -108,9 +108,72 @@ h2{
 }
 
 .tablaContenido{
-    padding: 1%;
+    padding: 0.4em;
     float:right;
     background-color: rgb(235, 235, 235);
     margin: 1%;
-    border: dashed 6px blue;
+    margin-right: 2%;
+    margin-bottom: 2em;
+    border: dashed 0.4em blue;
+    position:relative;
+    
+}
+
+.tablaContenido a{
+    color: blue;
+}
+.tablaContenido li{
+    color: black;
+}
+
+.cuaderno{
+    background-color: burlywood;
+    margin: 1%;
+    padding: 1%;
+}
+
+#objetivos{
+    color: blue;
+    border-bottom: 1px solid blue;
+    margin-right: 15%;
+
+}
+#conceptos{
+    color: blue;
+    border-bottom: 1px solid blue;
+    margin-right: 15%;
+
+}
+.cuaderno li{
+    color: black;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+#problema{
+    color: blue;
+    border-bottom: 1px solid blue;
+}
+
+.bloqueexplicacion{
+    background-color: turquoise;
+    padding: 1em;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.salidapantalla{
+    background-color: black;
+    color:green;
+    padding: 1em;
+    border: 0.3em yellow double;
+    margin: 1em;
+}
+
+.bloqueexplicacion ol li a{
+    color:red
+}
+p a{
+    color:red;
+}
+h4{
+    color: blue;
 }
