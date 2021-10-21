@@ -97,3 +97,20 @@ a{
     clear: both;
     
 }
+
+h2{
+    background-color: rgb(91, 158, 235);
+    border: blue double 3px;
+    padding: 2%;
+    text-align: center;
+    margin:1%;
+    color: darkblue;
+}
+
+.tablaContenido{
+    padding: 1%;
+    float:right;
+    background-color: rgb(235, 235, 235);
+    margin: 1%;
+    border: dashed 6px blue;
+}
