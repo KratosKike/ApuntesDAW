@@ -13,11 +13,41 @@
         var iPrecio = 6.50
         console.log("El importe total de la compra es: "+iTarrina*iPrecio);
     
-        var iZapatillas, iCortador, iTotalArticulos;
-        iZapatillas = "5";
-
         document.write("Hola mundo");
+        var sEleccion =prompt("Elige un color");
+
+        switch(sEleccion){
+            case "blue":
+            case "azul":{
+                document.body.style.backgroundColor = "blue";
+                break;
+            }
+           /* case "azul":{
+                document.body.style.backgroundColor = "blue";
+                break;
+            }*/
+            case "verde":{
+                document.body.style.backgroundColor = "green";
+                break;
+            }
+            case "green":{
+                document.body.style.backgroundColor = "green";
+                break;
+            }
+            case "amarillo":{
+                document.body.style.backgroundColor = "yellow";
+                break;
+            }
+            case "yellow":{
+                document.body.style.backgroundColor = "yellow";
+                break;
+            }
+            default:{}
+        }
+
+
     </script>
+
 
 
 </body>
