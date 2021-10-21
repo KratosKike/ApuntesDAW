@@ -33,7 +33,9 @@ $brutoarray2 = str_split($bruto2);
 }*/
 echo "</br>";
 
-/*foreach($arraycaracteres as $caracter){
+echo "Codigo Cesar metodo 1: </br>";
+
+foreach($arraycaracteres as $caracter){
     if(strpos($permitidos,$caracter)){//¿Esta en el abecedario?
         //detectar posicion del caracter
         $posC=strpos($bruto1,$caracter);
@@ -43,7 +45,11 @@ echo "</br>";
     }else{
         echo $caracter;
     }
-}*/
+}
+
+echo "Codigo Cesar metodo 2: </br>";
+echo "</br>";
+
 foreach($arraycaracteres as $caracter){
 
     if(strpos($permitidos,$caracter)){//¿Esta en el abecedario?
@@ -67,21 +73,11 @@ foreach($arraycaracteres as $caracter){
         }
 
     
-    
-    
     }else{
         echo $caracter;
     }
         
-    
+
 }
-
-
-
-
-
-
-
-
 
 ?>
