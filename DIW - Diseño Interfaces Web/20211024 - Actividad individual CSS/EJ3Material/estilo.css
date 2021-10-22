@@ -21,6 +21,8 @@ div.bloqueexplicacion dd {
     border: dotted 0.1em black;
     padding-top:0.5em;
     padding-bottom:0.5em;
+    padding-left:0.5em;
+    padding-right:0.5em;
     background-color: #ffd6d6;
 }
 
@@ -49,11 +51,7 @@ img{
 }
 
 .logo{
-
-    
     background-color: white;
-    
-  
 }
 
 li{
@@ -158,6 +156,7 @@ h2{
     background-color: turquoise;
     padding: 1em;
     font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    margin-bottom:0.5em;
 }
 
 .salidapantalla{
@@ -176,4 +175,61 @@ p a{
 }
 h4{
     color: blue;
+}
+
+.bloqueexplicacion dt{
+    font-weight: bold;
+}
+
+.figura{
+    background-color: rgb(255, 255, 255);
+    margin-top: 0.5em;
+    padding: 0.5em;
+    border: solid blue 0.1em;
+    text-align: center;
+}
+.codigo{
+    background-color: rgb(24, 153, 228);
+    padding: 0.5em;
+    color: white;
+    border: double blue 0.3em;
+}
+.bloqueexplicacion ul li a{
+    color: red;
+}
+
+#bibliografia,#experimentos,#ejercicios,#problemas,#ampBibliografia{
+    color: blue;
+    border-bottom: blue solid 0.1em;
+}
+
+
+.identificadorExp{
+    color: blue;
+    font-size: 1.3em;
+    background-color: rgb(16, 212, 121);
+    padding: 0.1em;
+    border: 0.2em blue solid;
+    font-weight: bold;
+}
+
+.identificadorEje{
+    color: blue;
+    font-size: 1.3em;
+    background-color: rgb(204, 122, 16);
+    padding: 0.1em;
+    border: 0.2em blue solid;
+    font-weight: bold;
+}
+.identificadorPro{
+    color: blue;
+    font-size: 1.3em;
+    background-color: rgb(255, 238, 0);
+    padding: 0.1em;
+    border: 0.2em blue solid;
+    font-weight: bold;
+}
+
+.bloqueexplicacion ul li{
+    text-align: justify;
 }

@@ -1,0 +1,80 @@
+body{
+    background-color: rgb(31, 54, 47);
+}
+
+#cabecera{
+    background-color: rgb(13, 25, 46);
+    overflow: hidden;
+}
+
+#cabecera2{
+    background-color: black;
+    overflow: hidden;
+    padding: 0.5em;
+    /*margin-top: 10px;*/
+    margin-bottom: 10px;
+    padding-left: 5em;
+}
+
+#cabecera2 a{
+    margin-left: 1em;
+}
+
+#logo{
+    float:left;
+    border: 0.5em red solid;
+    margin:1em;
+}
+
+.titulo{
+    background-color: black;
+    color: aliceblue;
+    text-align: center;
+    
+}
+
+#cuadroForo{
+    background-color: rgb(13, 25, 46);
+    padding-bottom: 10px;
+    
+}
+
+#textobarra{
+    color: blanchedalmond;
+    padding:2%;
+}
+#textobarra2{
+    color: blanchedalmond;
+    padding:5%;
+}
+
+table{
+    width: 98%;
+}
+
+#filapost{
+    background-color: blanchedalmond;
+    border: solid black 0.3em;
+}
+
+#pie{
+    background-color: grey;
+    text-align: center;
+    padding: 10px;
+    margin-top: 10px;
+}
+
+table { 
+    border-collapse:collapse ;
+    margin: 0.5em;
+}
+
+#post{
+    padding-top: 0.3em;
+    padding-left: 0.3em;
+
+}
+
+.barraposts td{
+    padding: 0.5em;
+}
