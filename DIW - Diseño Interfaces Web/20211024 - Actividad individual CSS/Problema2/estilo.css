@@ -1,0 +1,53 @@
+body{
+    background-color: aquamarine;
+}
+
+#cabecera{
+    background-color: cadetblue;
+    overflow: hidden;
+}
+
+#cabecera2{
+    background-color: burlywood;
+    overflow: hidden;
+    padding-left: 10%;
+    /*margin-top: 10px;*/
+    margin-bottom: 10px;
+}
+
+#logo{
+    padding: 10px;
+    padding-top: 11px;
+    float:left;
+    
+}
+
+#titulo{
+    float:left;
+}
+
+#cuadroForo{
+    background-color: black;
+    padding-bottom: 10px;
+    
+}
+
+#textobarra{
+    color: blanchedalmond;
+}
+#textobarra2{
+    color: blanchedalmond;
+    float: right;
+}
+
+#post{
+    background-color: blanchedalmond;
+    margin: 10px;
+}
+
+#pie{
+    background-color: grey;
+    text-align: center;
+    padding: 10px;
+    margin-top: 10px;
+}
