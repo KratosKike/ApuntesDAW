@@ -5,11 +5,17 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet"
+    href="estilo.css"
+    type="text/css" />
 </head>
 <body>
     <header id="cabecera">
         <img id="logo" src="logo1.png" alt="">
-        <h1 id="titulo">Yo Pregunto Alguien Responde</h1>
+        <div class="titulo">
+            <h1 id="titulo">Yo Pregunto Alguien Responde</h1>
+        </div>
+        
     </header>
     <header id="cabecera2">
         <button>Inicio</button>
@@ -18,11 +24,10 @@
         <button>Salir</button>
     
     </header>
-
-    <table>
-        <tr>
-            <td>Autor</td>
-            <td>Mensaje</td>
+    <article id="cuadroForo"><table>
+        <tr class="barraposts">
+            <td><span id="textobarra">Autor</span></td>
+            <td><span id="textobarra">Mensaje</span></td>
         </tr>
     
         <tr>
@@ -50,6 +55,8 @@
         </tr>
         
     </table>
+</article>
+    
     <span>Comentarios</span>
 
     <details>
