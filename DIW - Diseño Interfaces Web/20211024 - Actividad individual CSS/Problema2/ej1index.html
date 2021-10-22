@@ -5,15 +5,64 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-
-
-    <link rel="stylesheet"
-          href="estilo.css"
-          type="text/css" />
-
     <style type="text/css">
 
-    
+    body{
+        background-color: aquamarine;
+    }
+
+    #cabecera{
+        background-color: cadetblue;
+        overflow: hidden;
+    }
+
+    #cabecera2{
+        background-color: burlywood;
+        overflow: hidden;
+        padding-left: 10%;
+        /*margin-top: 10px;*/
+        margin-bottom: 10px;
+    }
+
+    #logo{
+        padding: 10px;
+        padding-top: 11px;
+        float:left;
+        
+    }
+
+    #titulo{
+        float:left;
+    }
+
+    #cuadroForo{
+        background-color: black;
+        padding-bottom: 10px;
+        
+    }
+
+    #textobarra{
+        color: blanchedalmond;
+    }
+    #textobarra2{
+        color: blanchedalmond;
+        float: right;
+    }
+
+    #filapost{
+        background-color: blanchedalmond;
+        margin: 10px;
+        border: inset 0pt;
+    }
+
+    #pie{
+        background-color: grey;
+        text-align: center;
+        padding: 10px;
+        margin-top: 10px;
+    }
+
+    table { border-collapse:collapse }
 
     
 
@@ -28,16 +77,17 @@
         <h1 id="titulo">Yo Pregunto Alguien Responde</h1>
     </header>
     <header id="cabecera2">
-        <button>Inicio</button>
-        <button>Nuevo post</button>
-        <button>Iniciar sesion</button>
-        <button>Salir</button>
+        <a href="" class="button">Inicio</a>
+        <a href="ej2nuevapubli.html" class="button">Nuevo Comentario</a>
+        <a href="" class="button">Iniciar sesion</a>
+        <a href="" class="button">Salir</a>
     
     </header>
 
     <article id="cuadroForo">
     <table>
         <tr>
+            <td></td>
             <td>
                 <span id="textobarra">Tema</span>
             </td>
@@ -48,26 +98,26 @@
                 <span id="textobarra2">Ultimo mensaje</span>
             </td>
         </tr>
+        <tr id="filapost">
+            <td id="post"><img src="icono1.png" alt=""></td>
+            <td><a href="huevo.html">Importante: ¿Cuanto se tarda en cocer un huevo?</a></td>
+            <td>2</td>
+            <td>hace 10 minutos <a href="">Usuario</a></td>
+        </tr>
+        <tr id="filapost">
+            <td id="post"><img src="icono1.png" alt=""></td>
+            <td><a href="tostadora.html">¿Como funciona una tostadora?</a></td>
+            <td>3</td>
+            <td>hace 3 minutos <a href="">Usuario</a></td>
+        </tr>
+        <tr id="filapost">
+            <td id="post"><img src="icono1.png" alt=""></td>
+            <td><a href="email.html">¿Como se manda un email?</a></td>
+            <td>2</td>
+            <td>hace 10 minutos <a href="">Usuario</a></td>
+        </tr>
     </table>
 
-
-        <header>
-            <span id="textobarra">Tema</span>
-            <span id="textobarra2">Respuestas</span>
-            <span id="textobarra2">Ultimo mensaje</span>
-        </header>
-        <article id="post"><img src="icono1.png" alt="">
-        <spam></spam>
-        <span></span><span></span>
-        </article>
-        <article id="post"><img src="icono1.png" alt="">
-        <spam></spam>
-        <span></span><span></span>
-        </article>
-        <article id="post"><img src="icono1.png" alt="">
-        <spam></spam>
-        <span></span><span></span>
-        </article>
     
     </article>
 
