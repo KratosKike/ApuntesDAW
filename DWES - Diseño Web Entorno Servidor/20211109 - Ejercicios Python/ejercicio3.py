@@ -12,4 +12,5 @@ longitud(inp_lst)
 palabra ="hola que tal"
 longitud(palabra)
 
-
+testeo = input("Introduce una cadena")
+longitud(testeo)
