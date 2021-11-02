@@ -1,8 +1,8 @@
 <?php
 $nombrecookie="color";
 $color = $_POST['color'];
-echo $color;
-setcookie("color",$color,0,);
+//echo $color;
+setcookie("color",$color,0);
 
 if (isset($_COOKIE['color'])){
     $colorCookie = $_COOKIE['color'];
@@ -31,5 +31,7 @@ if (isset($_COOKIE['color'])){
 }else{
     echo "cookie no creada";
 }
+
+echo "<a href='Ejercicio11.html'>Volver</a>"
 
 ?>
