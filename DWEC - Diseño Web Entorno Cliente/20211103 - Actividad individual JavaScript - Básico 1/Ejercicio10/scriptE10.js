@@ -11,7 +11,7 @@ function juego(){
     
     var intentosMostrar=iIntentos;
     //bucle por numero de intentos
-    for(var i=0;i<iIntentos;i++){
+    for(var i=0;i<=iIntentos;i++){
         //introducir numero por el usuario
         numeroUsuario = parseInt(prompt("Introduce un numero del 1 al 100"));
     
@@ -27,7 +27,7 @@ function juego(){
                 " y te quedan "+intentosMostrar+" intentos");
                 intentosMostrar--;
                 //pintar en el p el numero
-                //document.getElementsByClassName("mayor").innerHTML="Hola";
+                //document.getElementsById("mayor").innerHTML="Hola";
             }else{
                 //el numero es mayor
                 alert("El numero es menor que "+numeroUsuario+
