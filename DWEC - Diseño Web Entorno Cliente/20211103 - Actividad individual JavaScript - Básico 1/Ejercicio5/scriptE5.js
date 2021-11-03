@@ -14,7 +14,7 @@ var icont9 = 0;
 while(icont7<=10){
     document.write(icont7+"*"+itabla7+"="+icont7*itabla7);
     document.write("</br>");
-    icont7++;
+    icont7++; 
 }
 document.write("</br>");
 do{
