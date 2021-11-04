@@ -1,0 +1,19 @@
+.cuadroPrincipal{
+    text-align: center;
+    margin-top: 10%;
+    border: 0.1em solid black;
+    margin-left: 5em;
+    margin-right: 5em;
+    padding: 0.5em;
+    background: rgb(47,182,70);
+
+}
+body{
+    background: rgb(47,182,70);
+    background: linear-gradient(45deg, rgba(47,182,70,1) 0%, rgba(9,105,121,1) 50%, rgba(0,212,255,1) 100%);
+    height: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center center;
+}

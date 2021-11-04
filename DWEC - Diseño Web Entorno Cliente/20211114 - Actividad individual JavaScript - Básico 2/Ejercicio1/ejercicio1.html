@@ -1,0 +1,36 @@
+<!-- 
+    Escriba una función que dada la potencia de una fuente de señal y 
+    la potencia del ruido de fondo, calcule la relación entre ambas 
+    señales en decibelios. Integre esta función en una página web de 
+    tal forma que ésta pida las dos potencias e indique finalmente la 
+    relación entre las mismas, reduciendo la salida a dos decimales. 
+    Puede obtener más información sobre la forma de realizar este 
+    cálculo en la página http://es.wikipedia.org/wiki/Decibelio.
+ -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="scriptsE1.js"></script>
+    <link rel="stylesheet" type="text/css" href="estilo.css">
+</head>
+<body>
+    <article class="cuadroPrincipal">
+        <p>Potencia de una fuente de señal</p>
+        <input type="text" name="señal" id="señal">
+        <p>Potencia del ruido de fondo</p>
+        <input type="text" name="ruido" id="ruido">
+<br/>
+<br/>
+        <p>Solucion: <span id="sol"></span></p>
+        <button onclick=calculoPotencia()>Calcular</button>
+
+        </button>
+    </article>
+        
+
+</body>
+</html>
