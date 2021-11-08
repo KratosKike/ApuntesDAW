@@ -1,0 +1,49 @@
+<!--
+    Crearemos una página que nos servirá para determinar si una 
+    contraseña se puede considerar fuerte. Una contraseña fuerte será 
+    una contraseña que es lo suficientemente larga como para no ser 
+    descubierta por fuerza bruta (exigiremos un largo de, al menos, 
+    10 caracteres) y que contiene letras mayúsculas, minúsculas, números 
+    y símbolos en una variedad suficiente.
+Para este caso, consideraremos una contraseña como fuerte si contiene 
+al menos un 10% de símbolos, un 20% de números y al menos un tercio de 
+las letras en caso distinto (mayúsculas o minúsculas) al dominante en 
+la contraseña.
+
+Puede detectar el tipo de carácter en función de su código ASCII usando 
+el método charCodeAt de las cadenas de caracteres (más información del 
+método en 
+https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/String/charCodeAt). 
+Implemente el código de comprobación de contraseña en una función e 
+integre la misma en la página de forma que pueda ser probado por el 
+usuario introduciendo una contraseña.
+
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="scriptsE4.js"></script>
+    <link rel="stylesheet" type="text/css" href="estilo.css">
+</head>
+<body>
+    <article class="cuadroPrincipal">
+        <p>Introduce la contraseña</p>
+        <input type="text" name="contrasena" id="contrasena">
+
+<br/>
+<br/>
+        <button onclick=calculoContraseña()>Calcular</button>
+        <p>Solucion: <span id="sol"></span></p>
+        <div id="solucion"></div>
+        
+
+        </button>
+    </article>
+        
+
+</body>
+</html>
