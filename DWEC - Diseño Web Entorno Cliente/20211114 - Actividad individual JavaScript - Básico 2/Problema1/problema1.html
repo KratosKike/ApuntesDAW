@@ -1,0 +1,55 @@
+<!--
+    P1. Crea una página que, dadas las ofertas de una subasta, imprima 
+una tabla con éstas indicando el nombre del pujador y la puja realizada 
+ordenadas de forma decreciente. La entrada será una cadena de la forma 
+“nombre1,puja1;nombre2,puja2;nombre3,puja3;...”. Separa cada una de las 
+parejas de datos que representa una puja, empleando
+el método split propio de los objetos que representan cadenas (puede 
+encontrar información detallada sobre este método en:
+https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/String/split).
+
+De la misma forma, puedes separar el nombre del pujador de la cantidad 
+de la puja. Al final de este proceso, que se deberá implementar en una 
+función, tendrás una matriz bidimensional en el que cada fila 
+representará una puja, donde la primera columna será el nombre del 
+pujador y la segunda la cantidad de la puja.
+
+Tras ésto, ordena esta matiz usando el método sort de los objetos 
+que representan vectores (puede encontrar información detallada en:
+https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Array/sort), 
+empleando un criterio de ordenación definido por usted en forma de función. 
+Finalmente, crea una función que imprimirá una tabla HTML en función de 
+la matriz bidimensional ordenada.
+Ejemplo: Para la cadena de subasta: 
+entrada = "Cuadro Velazquez,6000;Cabeza de Elefante,9000;Silla del Rey,4500;Pipa de indio,450;"
+
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="scriptsP1.js"></script>
+    <link rel="stylesheet" type="text/css" href="estilo.css">
+</head>
+<body>
+    <article class="cuadroPrincipal">
+        <p>Introduce la cadena de subastas</p>
+        <input type="text" name="subasta" id="subasta">
+
+<br/>
+<br/>
+        <button onclick=calculoSubasta()>Calcular</button>
+        <p>Solucion: <span id="sol"></span></p>
+        <div id="solucion"></div>
+        
+
+        </button>
+    </article>
+        
+
+</body>
+</html>
