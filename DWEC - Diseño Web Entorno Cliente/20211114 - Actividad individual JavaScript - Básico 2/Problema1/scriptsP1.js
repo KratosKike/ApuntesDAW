@@ -8,11 +8,18 @@ function calculoSubasta(){
 
     //mostar tabla con cadena dada
 
-    for (let i = 0; i <arraySubastas.length-1; i++) {
-        div.insertAdjacentHTML("beforeend","</br>Subasta: "+arraySubastas[i]);
+    div.insertAdjacentHTML("beforeend","<div><table><tr><th>Pujador</th><th>Cantidad</th></tr>");
+
+    for (let i = 0; i <arraySubastas.length; i++) {
+
+        //partir array
+        var tupla = arraySubastas[i].split(',');
+        div.insertAdjacentHTML("beforeend","<tr><td>"+tupla[0]+"</td> <td>"+tupla[1]+"</td></tr>");
+        //div.insertAdjacentHTML("beforeend","</br>Subasta: "+arraySubastas[i]);
 
     }
 
+    div.insertAdjacentHTML("beforeend","</table></div>");
 
 
 }
