@@ -11,14 +11,15 @@ function calculoContraseña(){
     //limpiar div
     div.innerHTML = " ";
 
-    div.insertAdjacentHTML("beforeend",sContrasena+" ");
-    div.insertAdjacentHTML("beforeend",lon+" ");
+    //div.insertAdjacentHTML("beforeend",sContrasena+" ");
+    //div.insertAdjacentHTML("beforeend",lon+" ");
     if(sContrasena.length<10){//comprobar longitud
         div.insertAdjacentHTML("beforeend",
         "</br>La contraseña debe de ser de al menos 10 caracteres");
         valido = false;
     }
     //combrobar que hay numeros, mayusculas y simbolos
+    //creamos expresion regular para recoger las minusculas
     var minusculas=/[a-z]/g;
     var inumMinus = 0;
     if(!sContrasena.match(minusculas)){
@@ -34,6 +35,7 @@ function calculoContraseña(){
         }
     }
     //comprobar que tiene mayusculas
+    //creamos expresion regular para recoger las mayusculas
     var mayus =/[A-Z]/g;
     var inumMayus = 0
     if(!sContrasena.match(mayus)){
@@ -49,6 +51,7 @@ function calculoContraseña(){
         }
     }
     //comrpobar que tiene numeros
+    //creamos expresion regular para recoger los numeros
     var nums =/[0-9]/g;
     var inums = 0;
     if(!sContrasena.match(nums)){
@@ -63,6 +66,7 @@ function calculoContraseña(){
         }
     }
     //comprobar que tiene simbolos
+    //creamos expresion regular para recoger un numero determinado de simbolos
     var simbols = /[!"·$%&/()=?¿|@#~€¬]/g;
     var inumSimbolos = 0;
     if(!sContrasena.match(simbols)){
@@ -112,9 +116,9 @@ function calculoContraseña(){
     }
 
     if(valido){
-        div.insertAdjacentHTML("beforeend","</br>Contraseña valida");
+        div.insertAdjacentHTML("beforeend","</br></br>Contraseña valida");
     }else{
-        div.insertAdjacentHTML("beforeend","</br>Contraseña no valida");
+        div.insertAdjacentHTML("beforeend","</br></br>Contraseña no valida");
     }
 
             
