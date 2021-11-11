@@ -2,6 +2,7 @@ function calculoSubasta(){
     var sSubasta = document.getElementById("subasta").value;
     var div = document.getElementById("solucion");
     var divN = document.getElementById("solucionNombre");
+    var divNum = document.getElementById("solucionNumero");
 
     //crear array de subastas
 
@@ -56,18 +57,32 @@ function calculoSubasta(){
     })
 
     arrayNumeros = arrayNumerosInverso.sort();
-    arrayNumerosBien = arrayNumerosInverso.sort(function(a,b){
+    /*arrayNumerosBien = arrayNumerosBien.sort(function(a,b){
         return a-b;
-    });
+    });*/
+
+    var tabla3 = ""
+    tabla3 = tabla3+"<div><table><tr><th>Cantidad</th><th>Pujador</th></tr>"
+    for (let i3 = arrayNumerosInverso.length-2; i3 >-1; i3--) {
+
+        //partir array
+        //alert(tabla2);
+        var tupla3 = arrayNumeros[i3].split(',');
+        tabla3 = tabla3+"<tr><td>"+tupla3[0]+"</td> <td>"+tupla3[1]+"</td></tr>";
+        
+    }
 
 
-    arrayNumerosBien.forEach(function(element) {
+    /*arrayNumerosBien.forEach(function(element) {
         console.log(element);
-      });
+      });*/
 
     arrayNumerosInverso.forEach(function(element) {
         console.log(element);
       });
+
+
+      divNum.innerHTML = tabla3;
 
     
 
