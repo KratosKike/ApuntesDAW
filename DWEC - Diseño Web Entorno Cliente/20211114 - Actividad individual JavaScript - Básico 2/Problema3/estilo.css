@@ -17,3 +17,9 @@ body{
     background-attachment: fixed;
     background-position: center center;
 }
+div{
+    text-align: -webkit-center;
+}
+td,th{
+    border: 0.1em solid black;
+}
