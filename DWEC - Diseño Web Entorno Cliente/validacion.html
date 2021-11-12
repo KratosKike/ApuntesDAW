@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        form {
+            width: 295px;
+        }
+        ul {
+            list-style: none;
+        }
+        label {
+            width: 200px;
+            display: block;
+            margin: 10px;
+            float: left;
+        }
+    </style>
+
+
+
+</head>
+
+<body>
+    <form name='formularioJS' onsubmit='return validar()'>
+        <ul>
+<li>
+            	<label for='nombre'>Nombre*</label>
+            	<input type='text' id='nombre' name='nombre' />
+            </li>
+            <li>
+                <label for='direccion'>Dirección*</label>
+                <input type='text' id='direccion' name='direccion' />
+            </li>
+            <li>
+                <label for='edad'>Edad</label>
+                <input type='text' id='edad' name='edad' />
+            </li>
+            <li>
+                <label for='email'>E-mail</label>
+                <input type='text' id='email' name='email' />
+            </li>
+            <li>
+                <label for='estudios'>Estudios</label>
+                <select id='estudios' name='estudios'>
+                    <option value=''>Seleccione</option>
+                    <option>Ningunos</option>
+                    <option>Primarios</option>
+                    <option>Bachiller</option>
+                    <option>Grado</option>
+                    <option>Master</option>
+                </select>
+            </li>
+            <li>
+                <label>
+                    <input type='checkbox' value='SI' id='acepto' /> He leído y acepto las condiciones
+                </label>
+            </li>
+        </ul>
+        <button>Dar de alta</button>
+    </form>
+
+    
+</body>
+</html>

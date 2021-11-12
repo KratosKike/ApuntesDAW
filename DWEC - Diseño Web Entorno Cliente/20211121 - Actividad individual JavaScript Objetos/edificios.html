@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" type="text/css" href="estilo.css">
+    <title>Document</title>
+</head>
+<body onload="inicializar()">
+
+    <p>Calle<input type="text" name="" id="calle"></p> 
+    <p>Numero <input type="text" name="" id="num"></p>
+    <p>CP <input type="text" name="" id="cp"></p>
+    <button onclick=crearEdificio()>Crear nuevo edificio</button>
+    <br/>
+    <button onclick=muestraEdificios()>Mostrar lista edificios</button>
+    <p>Cambiar calle de edificio</p>
+    <p>Introduce ID edificio<input type="text" name="" id="cambioCid"></p>
+    <p>Introduce nuevo nombre de calle <input type="text" name="" id="cambioCcalle"></p>    
+    <button onclick=modificarCalle()>Cambiar Calle</button>
+    <p>Cambiar Numero de edificio</p>
+    <p>Introduce ID edificio<input type="text" name="" id="cambioNid"></p>
+    <p>Introduce nuevo numero <input type="text" name="" id="cambioNnumero"></p>    
+    <button onclick=modificarNumero()>Cambiar Calle</button>
+
+
+
+
+    <div id="log">
+
+    </div>
+
+</body>
+<script src="scriptEdificios.js"></script>
+</html>
