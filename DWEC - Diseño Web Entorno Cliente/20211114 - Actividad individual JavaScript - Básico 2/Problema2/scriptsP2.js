@@ -13,6 +13,12 @@ setTimeout(function cambioVentana(){
     document.body.style.background = "red";
 
     //ocultar esperando
+
+    //funcion para blinkear
+    var blinkSalto= 1000;
+    var tiempo = setInterval(function(){
+        agotado.style.visibility = (agotado.style.visibility == 'hidden' ? '':'hidden');
+    },blinkSalto);
     
     //alert(espera);
     espera.style.display = "none";

@@ -23,10 +23,10 @@ body{
     display:none;
     color: white;
     /* efecto para hacer el parpadeo*/
-    animation: twinkle 0.7s infinite alternate;
+    /*animation: twinkle 0.7s infinite alternate;*/
 }
 
-@keyframes twinkle {
+/*@keyframes twinkle {
     0%{opacity:.0.9;}
     100%{opacity:0;}
-}
+}*/
