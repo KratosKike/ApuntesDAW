@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="vivienda.php" method="post">
+
+        <h1>Inserción de vivienda</h1>
+        <p>Tipo de vivienda <select name="tipo" id="">
+            <option value="Piso">Piso</option>
+            <option value="Adosado">Adosado</option>
+            <option value="Chalet">Chalet</option>
+            <option value="Casa">Casa</option>
+        </select></p>
+        <p>Zona <select name="zona" id="">
+            <option value="Centro">Centro</option>
+            <option value="Nervion">Nervión</option>
+            <option value="Triana">Triana</option>
+            <option value="Aljarafe">Aljarafe</option>
+            <option value="Macarena">Macarena</option>
+        </select></p>
+        <p>Dirección 
+            <input type="text" name="dir" id=""></p>
+
+        <p>Numero de dormitorios
+            
+            <input type="number" name="dormit" value="dormit" id="" min="1" max="5"></p>
+
+        <p>Precio en euros 
+            <input type="number" name="precio" value="precio" id=""></p>
+
+        <p>Tamaño en metros cuadrados 
+            <input type="number" name="metros" value="metros" id=""></p>
+
+        <p>Extras <input type="checkbox" name="extra[]" value="e_piscina" id="">Piscina
+            <input type="checkbox" name="extra[]" value="e_jardin" id="">Jardin
+            <input type="checkbox" name="extra[]" value="e_garaje" id="">Garaje
+        </p>
+
+        <p>Foto <input type="file" name="foto" id=""></p>
+
+        <p>Observaciones <textarea name="obs" id="" cols="30" rows="10"></textarea></p>
+
+        <input type="submit" value="Enviar">
+
+
+
+
+    </form>
+</body>
+</html>
