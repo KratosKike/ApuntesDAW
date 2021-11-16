@@ -7,7 +7,7 @@
     <title>Document</title>
 </head>
 <body>
-    <form action="vivienda.php" method="post">
+    <form enctype="multipart/form-data" action="vivienda.php" method="post">
 
         <h1>Inserción de vivienda</h1>
         <p>Tipo de vivienda <select name="tipo" id="">
@@ -36,20 +36,22 @@
         <p>Tamaño en metros cuadrados 
             <input type="number" name="metros" value="metros" id=""></p>
 
-        <p>Extras <input type="checkbox" name="extra[]" value="e_piscina" id="">Piscina
-            <input type="checkbox" name="extra[]" value="e_jardin" id="">Jardin
-            <input type="checkbox" name="extra[]" value="e_garaje" id="">Garaje
+        <p>Extras <input type="checkbox" name="extra[]" value="piscina" id="">Piscina
+            <input type="checkbox" name="extra[]" value="jardin" id="">Jardin
+            <input type="checkbox" name="extra[]" value="garaje" id="">Garaje
         </p>
 
-        <p>Foto <input type="file" name="foto" id=""></p>
+        <p>Foto <input type="file" name="file" id="file"></p>
 
         <p>Observaciones <textarea name="obs" id="" cols="30" rows="10"></textarea></p>
 
-        <input type="submit" value="Enviar">
+        <input type="submit" value="Enviar" name="submit">
 
 
 
 
     </form>
+
+    [<a href='muestras.php'>Ver viviendas</a>]
 </body>
 </html>

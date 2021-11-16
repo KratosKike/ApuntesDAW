@@ -7,8 +7,9 @@ $dir = $_POST['dir'];
 $dormi = $_POST['dormit'];
 $precio = $_POST['precio'];
 $metros = $_POST['metros'];
-$foto = $_POST['foto'];
+//$foto = $_POST['file'];
 $obs = $_POST['obs'];
+$extrasString="";
 
 if(isset($_POST['extra']) && !empty($_POST['extra'])){
     $extras = $_POST['extra'];
@@ -17,6 +18,24 @@ if(isset($_POST['extra']) && !empty($_POST['extra'])){
 $errores = "";
 
 $validar = true;
+
+//fichero foto
+
+if(isset($_POST['submit'])){
+    $dominio = dirname(__DIR__);
+    $name       = $_FILES['file']['name'];  
+    $temp_name  = $_FILES['file']['tmp_name'];  
+    if(isset($name) and !empty($name)){
+        $direccion = $dominio.'\Examen Primer Trimestre\fotos\\';      
+        if(move_uploaded_file($temp_name, $direccion.$name)){
+            //echo 'File uploaded successfully';
+        }
+    } else {
+        //echo 'You should select a file to upload !!';
+    }
+}
+
+
 
 //validar direccion
 
@@ -65,36 +84,76 @@ if($validar){
 
     echo("<ul>Tipo: ".ucfirst($tipo)."</ul>");
     echo("<ul>Zona: ".ucfirst($zona)."</ul>");
+    echo("<ul>Direccion: ".ucfirst($dir)."</ul>");
+    echo("<ul>Numero de dormitorios: ".$dormi."</ul>");
+    echo("<ul>Precio: ".$precio." euros</ul>");
+    echo("<ul>Tamaño: ".$metros." metros cuadrados</ul>");
+    echo("<ul>Extras: ");
+    if(isset($_POST['extra']) && !empty($_POST['extra'])){
+        foreach($extras as $seleccionado){
+            echo(ucfirst($seleccionado)." ");
+            $extrasString=$extrasString.ucfirst($seleccionado)." ";
+        }
+    }
+    echo("</ul>");
+    //echo("<ul>Foto:<img src='fotos/".$name."'></ul>");
+    echo("<ul>Foto: <a href='fotos/".$name."'>$name</a></ul>");
+    
+    echo("<ul>Observaciones: ".$obs."</ul>");
+
+    echo($extrasString);
+
+    //bloque de base de datos
+
+    //datos base de datos
+    $usuario ="root";
+    $password="";
+    $servidor="localhost";
+    $bd="lindavista";
+    //conexion bd
+    $conexion = mysqli_connect( $servidor, $usuario, "" ) or die ("No se ha podido conectar al servidor de Base de datos");
+    $db = mysqli_select_db( $conexion, $bd ) or die ( "No se ha podido conectar a la base de datos" );
+
+    if($conexion){
+        echo("Conexion a la base de datos realizada</br>");
+
+        //comprobar si existe la talba viviendas
+        $val = mysqli_query($conexion,'select * from `viviendas` LIMIT 1');
+
+        if($val !== FALSE){
+            //Existe, se procede a insertar el dato a la bd
+            echo("Existe tabla viviendas");
+            $sql="INSERT INTO `viviendas`(`id`, `tipo`, `zona`, `direccion`, `ndormitorios`, `precio`, `tamano`, `extras`, `foto`, `observaciones`) VALUES ('','".$tipo."','".$zona."','".$dir."','".$dormi."','".$precio."','".$metros."','".$extrasString."','".$name."','".$obs."')";
+            echo($sql);
+            $resultado = mysqli_query($conexion,$sql) or die ( "Algo ha ido mal en la consulta a la base de datos");
+
+
+        }else{
+            //No existe la tabla viviendas, se procede a crear la tabla
+            echo("No existe la tabla viviendas, creando tabla viviendas...</br>");
+            //CREATE TABLE `lindavista`.`viviendas` ( `id` SMALLINT UNSIGNED NOT NULL AUTO_INCREMENT , `tipo` ENUM('Piso','Adosado','Chalet','Casa') NOT NULL , `zona` ENUM('Centro','Nervion','Triana','Aljarafe','Macarena') NOT NULL , `direccion` VARCHAR(100) NOT NULL , `ndormitorios` ENUM('1','2','3','4','5') NOT NULL , `precio` INT NOT NULL , `tamano` INT NOT NULL , `extras` SET('Piscina','Jardin','Garaje','') NOT NULL , `foto` VARCHAR(50) NULL , `observaciones` TEXT NULL , PRIMARY KEY (`id`)) ENGINE = InnoDB;
+        }
+
+    }
+
+
+
+
+
+
+
+
+
+    //comentarios finales
 
     echo("Vivienda insertada en la base de datos</br>");
+
+    echo("[<a href='ejercicio1.html'>Insertar otra vivienda</a>]");
 }else{
     echo("No se ha podido realizar la inserción debido a los siguientes errores:</br>");
     echo($errores);
     echo("Vivienda no insertada en la base de datos</br>");
+    echo("[<a href='ejercicio1.html'>Volver</a>]");
 }
-
-
-
-echo($dir);
-echo("</br>");
-echo($dormi);
-echo("</br>");
-echo($precio);
-echo("</br>");
-echo($metros);
-echo("</br>");
-
-if(isset($_POST['extra']) && !empty($_POST['extra'])){
-    foreach($extras as $seleccionado){
-        echo($seleccionado." ");
-    }
-}
-
-echo($foto);
-echo("</br>");
-echo($obs);
-echo("</br>");
-
-
 
 ?>
