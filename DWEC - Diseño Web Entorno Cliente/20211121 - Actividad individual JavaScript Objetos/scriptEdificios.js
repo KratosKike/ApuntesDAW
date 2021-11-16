@@ -49,7 +49,6 @@ function crearEdificio(){
     debugger;
     log.insertAdjacentHTML("beforeend","<br/>Contruido nuevo edificio en la calle: "+calle+" no: "+numero+" CP: "+cp+"");
 
-
 }
 
 function muestraEdificios(){
@@ -94,4 +93,30 @@ function modificarNumero(){
         log.insertAdjacentHTML("beforeend","<br/>El numero de la id "+id+" es ahora "+newNumber);
 
     }
+}
+
+function modificarCodigoPostal(){
+    //obtener id
+    let id=document.getElementById("cambioCPid").value;
+    //comprobar si esa id esta en los edificios
+    if(id>edificios.length){
+        log.insertAdjacentHTML("beforeend","<br/>Esa Id no esta en el sistema");
+    }else{
+        var newCP=document.getElementById("cambioCPcp").value;
+        edificios[id-1].cp= newCP;
+        log.insertAdjacentHTML("beforeend","<br/>El CP de la id "+id+" es ahora "+newCP);
+
+    }
+}
+
+function imprimeCalle(){
+
+}
+
+function imprimeNumero(){
+
+}
+
+function imprimeCodigoPostal(){
+
 }
