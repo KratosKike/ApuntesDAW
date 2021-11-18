@@ -1,0 +1,29 @@
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+  }
+  nav li {
+    float: left; /* Opcional si se quiere hacer una botonera horizontal */
+    margin-right: 3px;
+  }
+  nav a {
+   display: block;
+   text-decoration: none;
+   /* a partir de aquí el diseño */
+   color: #fff; /* color tipográfico */
+   font-family: sans-serif; /* familia tipográfica */
+   font-size: 14px; /* tamaño de la fuente */
+   background-color: #07AD87; /* color de fondo */ 
+   padding: 10px 20px; /* más cuerpo al botón */
+   border: 1px solid #038265;
+   border-radius: 3px; /* puntas redondeadas*/
+  }
+  nav a:hover {
+    background-color: #038265;
+  }
+  a.active{
+    color:black;
+    background-color: aquamarine;
+  }
