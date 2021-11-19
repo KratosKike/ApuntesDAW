@@ -3,7 +3,7 @@ var i=0;
 
 var log = document.getElementById("log");
 
-function Edificio(id,calle,numero,CP){
+function Edificio(id,calle,numero,CP,viviendas,){
     this.id=id;
     this.calle = calle;
     this.numero = numero;
@@ -11,6 +11,7 @@ function Edificio(id,calle,numero,CP){
     this.datos = function(){
         alert(this.calle+" "+this.numero+" "+this.cp+" ");
     }
+    this.viviendas = viviendas;
 }
 
 var edificios=[];
@@ -35,7 +36,7 @@ function crearEdificio(){
     var cp = document.getElementById("cp").value;
 
     //crear variable edificio
-    var edificio = new Edificio(edificios.length+1,calle,numero,cp);
+    var edificio = new Edificio(edificios.length+1,calle,numero,cp,viviendas);
 
     //agregar edificio a array de edificios
     edificios.push(edificio);
@@ -110,13 +111,33 @@ function modificarCodigoPostal(){
 }
 
 function imprimeCalle(){
-
+    //obtener id
+    let id=document.getElementById("muestraId").value;
+    //muestra calle
+    log.insertAdjacentHTML("beforeend","<br/>La calle de la id "+id+" es "+edificios[id].calle);
 }
 
 function imprimeNumero(){
+    //obtener id
+    let id=document.getElementById("muestraId").value;
+    //muestra numero
+    log.insertAdjacentHTML("beforeend","<br/>El numero de la id "+id+" es "+edificios[id].numero);
 
 }
 
 function imprimeCodigoPostal(){
+    //obtener id
+    let id=document.getElementById("muestraId").value;
+    //muestra cp
+    log.insertAdjacentHTML("beforeend","<br/>El CP de la id "+id+" es "+edificios[id].cp);
+
+
+}
+
+function agregarPlantasYPuertas(){
+    //obtener id
+    let id=document.getElementById("pYpId").value;
+    let plantas=document.getElementById("pYpPlantas").value;
+    let puertas=document.getElementById("pYpPuertas").value;
 
 }
