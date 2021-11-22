@@ -164,13 +164,6 @@ if($validar){
     }
 
 
-
-
-
-
-
-
-
     //comentarios finales
     echo($errores);
     echo("Vivienda insertada en la base de datos</br>");
