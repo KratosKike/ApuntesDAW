@@ -4,7 +4,9 @@
 $tipo = $_POST['tipo'];
 $zona = $_POST['zona'];
 $dir = $_POST['dir'];
-$dormi = $_POST['dormit'];
+if(isset($_POST['dormit']) && !empty($_POST['dormit'])){
+    $dormi = $_POST['dormit'];
+}
 $precio = $_POST['precio'];
 $metros = $_POST['metros'];
 //$foto = $_POST['file'];
@@ -18,6 +20,7 @@ if(isset($_POST['extra']) && !empty($_POST['extra'])){
 $errores = "";
 
 $validar = true;
+$validarFoto = true;
 
 //fichero foto
 
@@ -25,11 +28,20 @@ if(isset($_POST['submit'])){
     $dominio = dirname(__DIR__);
     $name       = $_FILES['file']['name'];  
     $temp_name  = $_FILES['file']['tmp_name'];  
+    $ext       = $_FILES['file']['type'];
+    //echo($ext);
     if(isset($name) and !empty($name)){
-        $direccion = $dominio.'\Examen Primer Trimestre\fotos\\';      
-        if(move_uploaded_file($temp_name, $direccion.$name)){
-            //echo 'File uploaded successfully';
+        if($ext == "image/jpeg" || $ext == "image/png"){
+            $direccion = $dominio.'\Examen Primer Trimestre\fotos\\';      
+            if(move_uploaded_file($temp_name, $direccion.$name)){
+                echo 'File uploaded successfully';
+            }
+        }else{
+            $validarFoto = false;
+            $errores = $errores."Archivo no valido, se subira sin la foto</br>";
+            $name="";
         }
+        
     } else {
         //echo 'You should select a file to upload !!';
     }
@@ -61,6 +73,11 @@ $validar = false;
 
 if(isset($_POST['precio']) && !empty($_POST['precio'])){
     
+    if(!is_numeric($_POST['precio'])){
+        $errores = $errores."Precio debe de ser un numerico</br>";
+        $validar = false;
+    }
+
 }else{
     $errores = $errores."Debe introducir precio</br>";
     //echo("Debe introducir precio</br>");
@@ -70,6 +87,11 @@ if(isset($_POST['precio']) && !empty($_POST['precio'])){
 //validar metros cuadrados
 
 if(isset($_POST['metros']) && !empty($_POST['metros'])){
+
+    if(!is_numeric($_POST['metros'])){
+        $errores = $errores."Metros debe de ser un numerico</br>";
+        $validar = false;
+    }
     
 }else{
     $errores = $errores."Debe introducir un numero de metros cuadrados</br>";
@@ -97,34 +119,39 @@ if($validar){
     }
     echo("</ul>");
     //echo("<ul>Foto:<img src='fotos/".$name."'></ul>");
-    echo("<ul>Foto: <a href='fotos/".$name."'>$name</a></ul>");
+    if($validarFoto){
+        echo("<ul>Foto: <a href='fotos/".$name."'>$name</a></ul>");
+    }else{
+        echo("<ul>Foto: </ul>");
+    }
+    
     
     echo("<ul>Observaciones: ".$obs."</ul>");
 
-    echo($extrasString);
+    //echo($extrasString);
 
     //bloque de base de datos
 
     //datos base de datos
     $usuario ="root";
-    $password="";
+    $password="root";
     $servidor="localhost";
     $bd="lindavista";
     //conexion bd
-    $conexion = mysqli_connect( $servidor, $usuario, "" ) or die ("No se ha podido conectar al servidor de Base de datos");
+    $conexion = mysqli_connect( $servidor, $usuario, $password ) or die ("No se ha podido conectar al servidor de Base de datos");
     $db = mysqli_select_db( $conexion, $bd ) or die ( "No se ha podido conectar a la base de datos" );
 
     if($conexion){
-        echo("Conexion a la base de datos realizada</br>");
+        //echo("Conexion a la base de datos realizada</br>");
 
         //comprobar si existe la talba viviendas
         $val = mysqli_query($conexion,'select * from `viviendas` LIMIT 1');
 
         if($val !== FALSE){
             //Existe, se procede a insertar el dato a la bd
-            echo("Existe tabla viviendas");
+            //echo("Existe tabla viviendas");
             $sql="INSERT INTO `viviendas`(`id`, `tipo`, `zona`, `direccion`, `ndormitorios`, `precio`, `tamano`, `extras`, `foto`, `observaciones`) VALUES ('','".$tipo."','".$zona."','".$dir."','".$dormi."','".$precio."','".$metros."','".$extrasString."','".$name."','".$obs."')";
-            echo($sql);
+            //echo($sql);
             $resultado = mysqli_query($conexion,$sql) or die ( "Algo ha ido mal en la consulta a la base de datos");
 
 
@@ -145,7 +172,7 @@ if($validar){
 
 
     //comentarios finales
-
+    echo($errores);
     echo("Vivienda insertada en la base de datos</br>");
 
     echo("[<a href='ejercicio1.html'>Insertar otra vivienda</a>]");
