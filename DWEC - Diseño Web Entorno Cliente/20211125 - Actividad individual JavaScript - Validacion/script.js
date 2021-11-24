@@ -70,15 +70,37 @@ document.getElementById("enviar").addEventListener("click",function(event){
     //y que esté en el rango de 0 a 105. Si se produce algún error, mostrar 
     //el mensaje en el contenedor "errores" y poner el foco en el campo EDAD.
 
+    //obtener edad
 
+    var iEdad = document.getElementById("edad").value;
+    var elementoEdad = document.getElementById("edad");
 
+    var numEdad = parseInt(iEdad);
 
+    if(iEdad == ""){
+        casillaError.insertAdjacentHTML("beforeend",
+        "ERROR: El campo edad no puede estar vacio<br/>");
+        elementoEdad.style.borderColor="#FF0000";
+    }else{
+        if(Number.isInteger(numEdad)){
+            if(numEdad<0 || numEdad>105){
+                validar = false;
+                casillaError.insertAdjacentHTML("beforeend",
+            "ERROR: Edad debe estar comprendido entre 0 y 105<br/>");
+            elementoEdad.style.borderColor="#FF0000";
+            }else{
+                elementoEdad.style.borderColor="#00FF00";
+            }
+    
+        }else{
+            validar = false;
+            casillaError.insertAdjacentHTML("beforeend",
+            "ERROR: Edad debe de ser un numero<br/>");
+            elementoEdad.style.borderColor="#FF0000";
+        }
+    }
 
-
-
-
-
-
+    
 
 
 
