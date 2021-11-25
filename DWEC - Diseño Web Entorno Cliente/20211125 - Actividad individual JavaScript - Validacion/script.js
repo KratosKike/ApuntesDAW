@@ -27,7 +27,7 @@ function init(){
      //APELLIDOS. Si se produce algún error, mostrar el mensaje en 
      //el contenedor "errores" y poner el foco en los campos correspondientes.
      
-     document.getElementById("enviar").addEventListener("click",function(event){
+     document.getElementById("enviar").addEventListener("click",function(evento){
          
          if(confirm("¿Estas seguro de que quieres enviar los datos?")){
          
@@ -273,7 +273,7 @@ function init(){
          if(validar){
      
          }else{
-             event.preventDefault();
+             evento.preventDefault();
              returnToPreviousPage();
          }
      
