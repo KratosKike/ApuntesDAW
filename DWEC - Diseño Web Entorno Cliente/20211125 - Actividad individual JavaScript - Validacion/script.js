@@ -194,7 +194,13 @@ document.getElementById("enviar").addEventListener("click",function(event){
     var sFecha= document.getElementById("fecha").value;
     var elementoFecha = document.getElementById("fecha");
     var expresionFecha= /^(?:3[01]|[12][0-9]|0?[1-9])([\-/])(0?[1-9]|1[1-2])\1\d{4}$/;
+    // 0o 1 ocurrencias de 3 seguido de 0 o 1 o 1 y 2 seguido de un numero 
+    //del 0 al 9
+    // \ permite -/
+    //0?1-9 permite que haya 0 o 1 ocurrencias de un numero entre 1-9
+    //o un numero que sea 1 seguido de 1 o 2
     
+
 
 
     if(expresionFecha.test(sFecha)){
