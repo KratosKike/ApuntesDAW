@@ -1,4 +1,11 @@
 function initRegistro(){
+
+    
+    arrayUsuarios=[];
+
+    id=0;
+
+
     var l = localStorage;
  
     document.getElementById("bRegistro").addEventListener("click",function(evento){
@@ -45,6 +52,11 @@ function initRegistro(){
         
         if(validar){
             //guardar usuario
+            //alert("hola");
+            //obtener array usuarios
+            
+            var usuario={"id":"0","user":nombre,"pass":pass,"email":email}
+            localStorage.setItem("user0", JSON.stringify(usuario));
      
         }else{
             evento.preventDefault();
