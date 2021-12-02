@@ -137,6 +137,10 @@ a:link, a:visited, a:active {
     padding: 3em;
 }
 
+.errorRegistro{
+    background-color: red;
+}
+
 /* Carta */
 
 .bloqueCarta{

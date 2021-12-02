@@ -8,21 +8,23 @@ function initRegistro(){
         var pass = document.getElementById("nUpass").value;
         var email = document.getElementById("nUemail").value;
         var casillaError = document.getElementById("errorRegistro");
+        casillaError.innerHTML="";
+        //alert(casillaError);
 
         if(nombre ==""){
-            /*casillaError.insertAdjacentHTML("beforeend",
-            "ERROR: El campo nombre no puede estar vacio<br/>");*/
+            casillaError.insertAdjacentHTML("beforeend",
+            "ERROR: El campo nombre no puede estar vacio<br/>");
             validar = false;
-            alert("ERROR: El campo nombre no puede estar vacio");
+            //alert("ERROR: El campo nombre no puede estar vacio");
         }else{
             //return true;
         }
 
         if(pass ==""){
-            /*casillaError.insertAdjacentHTML("beforeend",
-            "ERROR: El campo nombre no puede estar vacio<br/>");*/
+            casillaError.insertAdjacentHTML("beforeend",
+            "ERROR: El campo nombre no puede estar vacio<br/>");
             validar = false;
-            alert("ERROR: El campo nombre no puede estar vacio");
+            //alert("ERROR: El campo nombre no puede estar vacio");
         }else{
             //return true;
         }
@@ -30,9 +32,9 @@ function initRegistro(){
         if(expEmail.test(email)){
 
          }else{
-             /*casillaError.insertAdjacentHTML("beforeend",
-             "ERROR: El email es incorrecto<br/>");*/
-             alert("ERROR: El email es incorrecto");
+             casillaError.insertAdjacentHTML("beforeend",
+             "ERROR: El email es incorrecto<br/>");
+             //alert("ERROR: El email es incorrecto");
              validar = false;
          }
 
