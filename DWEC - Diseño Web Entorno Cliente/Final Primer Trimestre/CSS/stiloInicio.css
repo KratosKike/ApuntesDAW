@@ -88,6 +88,7 @@
 .cartas5{
     text-align: center;
     display: flex;
+    justify-content: space-around;
 }
 
 .carta{
