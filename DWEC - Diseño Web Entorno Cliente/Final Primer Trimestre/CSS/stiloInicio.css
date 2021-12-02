@@ -1,3 +1,8 @@
+body{
+    background-color: rgb(19, 22, 22);
+}
+
+
 .inicio {
     background-color: aquamarine;
     display:flex;
