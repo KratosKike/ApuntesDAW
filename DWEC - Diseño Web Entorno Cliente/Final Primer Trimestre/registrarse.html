@@ -4,11 +4,12 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Digital Trading Market - Inicio</title>
+        <title>DCM - Registro</title>
         <link rel="stylesheet" type="text/css" href="CSS/stiloInicio.css">
         <script src="https://kit.fontawesome.com/3a1ada9a23.js" crossorigin="anonymous"></script>
+        <script src="JS/script.js"></script>
     </head>
-<body>
+<body onload="initRegistro()">
     <header class="inicio">
         <a href="index.html"><img class="logo" src="IMG/logo2.png" alt="LogoDGM" srcset=""></a>
         <h1 class="titulo">DigiCard Marketplace</h1>
@@ -31,10 +32,12 @@
             <input type="text" name="busqueda" id="busqueda" class="busqueda">
             <button>Buscar</button>
         </div>
-        <div class="carritoCompra">
-            <span>0</span>
-            <i class="fas fa-shopping-cart"></i>
-        </div>
+        <a href="carrito.html"class="carritoCompra">
+            <div class="carritoCompra">
+                <span>0</span>
+                <i class="fas fa-shopping-cart"></i>
+            </div>
+        </a>
     </nav>
 
 
@@ -57,8 +60,12 @@
                 </tr>
             </table>
          
-            <input type="submit" value="Registro">
+            <input type="submit" value="Registro" id="bRegistro">
         </form>
+
+        <div class="errorRegistro">
+            
+        </div>
 
     </article>
     

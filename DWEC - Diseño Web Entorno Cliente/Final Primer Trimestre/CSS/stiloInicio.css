@@ -8,7 +8,11 @@
     display:flex;
     padding-left:2em;
     padding:1em;
+    align-items: center;
 }
+
+a:link, a:visited, a:active {
+    text-decoration:none;}
 
 .logo{
     height: 5em;
@@ -125,4 +129,57 @@
     flex-direction: column;
     flex-wrap: nowrap;
     align-items: center;
+    padding: 3em;
+}
+
+/* Carta */
+
+.bloqueCarta{
+    background-color: rgb(66, 66, 66);
+    display: flex;
+    justify-content: center;
+}
+
+.cartaDatos{
+    border: solid 1px black;
+    padding: 2em;
+    text-align: center;
+}
+
+.cartaVentas{
+    display: flex;
+    flex-direction: column;
+    inline-size: -webkit-fill-available;
+}
+
+.venta{
+    display: flex;
+    padding:1em;
+    border: solid black 1px;
+}
+
+button.derecha {
+    margin: auto;
+}
+
+.derecha{
+    margin-left: 3em;
+}
+
+.par{
+    background-color: grey;
+}
+
+.impar{
+    background-color: white;
+}
+
+/* Carrito */
+
+.centroCarrito{
+    background-color: rgb(66, 66, 66);
+}
+
+.contenedorCarrito{
+    text-align: center;
 }
