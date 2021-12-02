@@ -1,42 +1,55 @@
 function initRegistro(){
     var l = localStorage;
     //evento guardar usuario
-    document.getElementById("bRegistro").addEventListener("click",function(evento){
-        //obtener campos
-        var nombre = document.getElementById("nUnombre").value;
-        var pass = document.getElementById("nUpass").value;
-        var email = document.getElementById("nUemail").value;
-        var casillaError = document.getElementById("errorRegistro");
-        //casillaError.innerHTML="";
-        var validar=true;
 
-        //comprobar nombre
-        /*if(nombre ==""){
-            validar = false;
+
+    document.getElementById("nUnombre").addEventListener("mouseout", validarNombre());
+    document.getElementById("nUpass").addEventListener("mouseout", validarPass());
+    document.getElementById("nUemail").addEventListener("mouseout", validarEmail());
+
+    function validarNombre(){
+        var nombre = document.getElementById("nUnombre").value;
+        var casillaError = document.getElementById("errorRegistro");
+        if(nombre ==""){
             casillaError.insertAdjacentHTML("beforeend",
             "ERROR: El campo nombre no puede estar vacio<br/>");
-    
-    
+            return false;
         }else{
-            
-        }*/
-
-        alert("funciona");
-        //comprobar contraseña
-
-        //comprobar email
-
+            return true;
+        }
+    }
+    function validarPass(){
+        var pass = document.getElementById("nUpass").value;
+        var casillaError = document.getElementById("errorRegistro");
+        if(pass ==""){
+            casillaError.insertAdjacentHTML("beforeend",
+            "ERROR: El campo contraseña no puede estar vacio<br/>");
+            return false;
+        }else{
+            return true;
+        }
+    }
+    function validarEmail(){
+        var email = document.getElementById("nUemail").value;
+        var casillaError = document.getElementById("errorRegistro");
         var expEmail = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
         if(expEmail.test(email)){
+            return true;
          }else{
-             validar = false;
              casillaError.insertAdjacentHTML("beforeend",
              "ERROR: El email es incorrecto<br/>");
+             return false;
          }
-        if(validar){
+    }
+
+    document.getElementById("bRegistro").addEventListener("click",function(evento){
+
+
+        alert("funciona");
+
+        
+        if(validarNombre()&&validarEmail()&&validarPass()){
             //guardar usuario
-            evento.preventDefault();
-            returnToPreviousPage();
      
         }else{
             evento.preventDefault();
