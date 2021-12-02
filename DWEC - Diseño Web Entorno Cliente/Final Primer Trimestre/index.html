@@ -7,16 +7,19 @@
     <title>DCM - Inicio</title>
     <link rel="stylesheet" type="text/css" href="CSS/stiloInicio.css">
     <script src="https://kit.fontawesome.com/3a1ada9a23.js" crossorigin="anonymous"></script>
-    <script src="JS/script.js"></script>
+    <script src="JS/scriptIndex.js"></script>
 </head>
-<body>
+<body onload="init()">
     <header class="inicio">
         <a href="index.html"><img class="logo" src="IMG/logo2.png" alt="LogoDGM" srcset=""></a>
         <h1 class="titulo">DigiCard Marketplace</h1>
-        <div class="registro">
+        <div class="registro" id="divregistro">
             <a href="iniciarSesion.html"><span>Iniciar sesion</span></a>
             <span>|</span>
             <a href="registrarse.html"><span>Registrarse</span></a>
+        </div>
+        <div class="registro" id="divsesion">
+            <Button id="cerrarsesion" onclick="cerrarSesion()">Cerrar sesion</Button>
         </div>
         <br/>
     </header>

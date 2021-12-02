@@ -1,9 +1,22 @@
+//comprobar que haya sesion
+
+
+
 function initRegistro(){
 
-    
-    arrayUsuarios=[];
+    function Usuario(id,user,pass,email){
+        this.id=id;
+        this.user = user;
+        this.pass = pass;
+        this.email = email;
+    }
 
-    id=0;
+    var arrayUsuarios=[];
+
+    var usuario = new Usuario(0,"kike","123","kratoskike@gmail.com");
+    arrayUsuarios.push(usuario);
+
+    localStorage.setItem(usuario.id, JSON.stringify(usuario));
 
 
     var l = localStorage;
@@ -55,8 +68,8 @@ function initRegistro(){
             //alert("hola");
             //obtener array usuarios
             
-            var usuario={"id":"0","user":nombre,"pass":pass,"email":email}
-            localStorage.setItem("user0", JSON.stringify(usuario));
+            var usuario={"id":arrayUsuarios.length,"user":nombre,"pass":pass,"email":email}
+            localStorage.setItem(arrayUsuarios.length, JSON.stringify(usuario));
      
         }else{
             evento.preventDefault();
@@ -65,3 +78,25 @@ function initRegistro(){
 
     },false)
 }
+
+
+//iniciar sesion
+
+function inicitIniciar(){
+    alert("hola");
+    document.getElementById("iniciarSes").addEventListener("click",function(){
+
+        alert("hola");
+
+        //obtener array de usuarios
+        var arrayBusqueda=[];
+
+        var lsLong= localStorage.length;
+        alert(lsLong);
+
+
+    
+    
+    },false);
+}
+
