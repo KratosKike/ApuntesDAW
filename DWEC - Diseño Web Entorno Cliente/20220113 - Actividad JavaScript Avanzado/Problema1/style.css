@@ -1,0 +1,19 @@
+.principal{
+    text-align: center;
+}
+
+.juego{
+    border: black 1px solid;
+    padding: 0.3em;
+}
+
+.casilla{
+    border: black 1px solid;
+    height: 100px;
+    width: 100px;
+}
+
+.linea{
+    display: flex;
+    justify-content: center;
+}
