@@ -1,6 +1,6 @@
 #casilla{
-    width: 5em;
-    height: 5em;
+    width: 6em;
+    height: 6em;
     border: 1px solid black;
     
     justify-content: center;
@@ -13,5 +13,20 @@
     grid-template-columns: auto auto auto;
     gap: 0;
     justify-content: center;
+}
+
+body{
+    background-color: cadetblue;
+    margin: 0px;
+}
+
+#cabecera{
+    background-color: black;
+    height: 3em;
+    margin-bottom: 2em;
+}
+
+#estado{
+    text-align: center;
 }
 
