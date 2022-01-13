@@ -1,0 +1,22 @@
+body{
+    background-color: black;
+}
+
+#titulo{
+    color: white;
+}
+
+#linea{
+    display: flex;
+    align-items: center;
+
+    /*color: white;*/
+}
+
+#pregunta{
+    margin-left: 1em;
+}
+
+.blanco{
+    color:white;
+}
