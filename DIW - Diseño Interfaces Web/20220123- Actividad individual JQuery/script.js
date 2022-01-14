@@ -5,9 +5,11 @@ $(document).ready(function(){
         //$(this).hide();
         //alert("hola");
         $(this).addClass("blanco");
-    },
+        $(this).addClass("margen");
+        },
     function(){
         //quitar texto en blanco
         $(this).removeClass("blanco");
+        $(this).removeClass("margen");
     });
 });
