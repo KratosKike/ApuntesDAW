@@ -74,38 +74,87 @@ var jugador=2;
 var mapa = [0, 0, 0, 0, 0, 0, 0, 0, 0,];
 function jugar(casilla,pos){
     if(jugador==1){//jugador 2
-        casilla.style.backgroundColor="#FF0000";
-        jugador=2;
-        mapa[pos]=jugador;
-        console.log(mapa);
-        comprobar();
+ 
+        if(mapa[pos]!=0){
+            alert("No puedes pintar aqui");
+        }else{
+            casilla.style.backgroundColor="#FF0000";
+            jugador=2;
+            mapa[pos]=jugador;
+            console.log(mapa);
+            comprobar();
+        }
+
     }else{//Jugador 1
-        casilla.style.backgroundColor="#00FF00";
-        jugador=1;
-        mapa[pos]=jugador;
-        console.log(mapa);
-        comprobar();
+        
+        if(mapa[pos]!=0){
+            alert("No puedes pintar aqui");
+        }else{
+            casilla.style.backgroundColor="#00FF00";
+            jugador=1;
+            mapa[pos]=jugador;
+            console.log(mapa);
+            comprobar();
+        }
+ 
     }
     
 
 }
 
-function comprobar(){
+function comprobarRepe(pos,jugador){
+    if(pos==1||pos==2){
+        alert("No puedes colorear aqui");
+        return true;
+    }else{
+        //mapa[pos]=jugador;
+        return false;
+        comprobar();
+    }
+}
 
-    //comprobar mapa
-    //horizontales
-    if(mapa[0] == mapa[1] && mapa[1] == mapa[2] && mapa[0] !=0) ganador(mapa[0]);
-    if(mapa[3] == mapa[4] && mapa[4] == mapa[5] && mapa[3] !=0) ganador(mapa[3]);
-    if(mapa[6] == mapa[7] && mapa[7] == mapa[8] && mapa[6] !=0) ganador(mapa[6]);
-    //verticales
-    if(mapa[0] == mapa[3] && mapa[3] == mapa[6] && mapa[0] !=0) ganador(mapa[0]);
-    if(mapa[1] == mapa[4] && mapa[4] == mapa[7] && mapa[1] !=0) ganador(mapa[1]);
-    if(mapa[2] == mapa[5] && mapa[5] == mapa[8] && mapa[2] !=0) ganador(mapa[2]);
-    //diagonales
-    if(mapa[0] == mapa[4] && mapa[4] == mapa[8] && mapa[0] !=0) ganador(mapa[0]);
-    if(mapa[2] == mapa[4] && mapa[4] == mapa[6] && mapa[2] !=0) ganador(mapa[2]);
+var jugadas = 0
+function comprobar(){
+    jugadas++;
+    if(jugadas==9){
+        alert("empate");
+        finPartida();
+    }else{
+        //comprobar mapa
+        //horizontales
+        if(mapa[0] == mapa[1] && mapa[1] == mapa[2] && mapa[0] !=0) ganador(mapa[0]);
+        if(mapa[3] == mapa[4] && mapa[4] == mapa[5] && mapa[3] !=0) ganador(mapa[3]);
+        if(mapa[6] == mapa[7] && mapa[7] == mapa[8] && mapa[6] !=0) ganador(mapa[6]);
+        //verticales
+        if(mapa[0] == mapa[3] && mapa[3] == mapa[6] && mapa[0] !=0) ganador(mapa[0]);
+        if(mapa[1] == mapa[4] && mapa[4] == mapa[7] && mapa[1] !=0) ganador(mapa[1]);
+        if(mapa[2] == mapa[5] && mapa[5] == mapa[8] && mapa[2] !=0) ganador(mapa[2]);
+        //diagonales
+        if(mapa[0] == mapa[4] && mapa[4] == mapa[8] && mapa[0] !=0) ganador(mapa[0]);
+        if(mapa[2] == mapa[4] && mapa[4] == mapa[6] && mapa[2] !=0) ganador(mapa[2]);
+    }
+  
+    
 }
 
 function ganador(gana){
     alert("Gana el jugador: "+gana);
+    finPartida();
+
+}
+
+function finPartida(){
+    //resetear colores
+    //alert("Entrando en fin partida");
+    //var casilla=document.getElementById("casilla1");
+    //casilla.style.backgroundColor="grey";
+    for(var cont=1;cont<9;cont++){
+        var casilla=document.getElementById("casilla"+cont);
+        casilla.style.backgroundColor="grey";
+    }
+    //alert(casilla);
+
+    //resetear mapa;
+    mapa = [0, 0, 0, 0, 0, 0, 0, 0, 0,];
+    document.getElementById("partida").disabled = false;
 }
