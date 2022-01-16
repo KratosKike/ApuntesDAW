@@ -7,6 +7,12 @@
     align-items: center;
     background-color: grey;
 }
+#titulo{
+    color: white;
+    display: flex;
+    justify-content: center;
+    font-size: 2em;
+}
 
 #tablero{
     display: grid;
@@ -22,7 +28,7 @@ body{
 
 #cabecera{
     background-color: black;
-    height: 3em;
+    
     margin-bottom: 2em;
 }
 

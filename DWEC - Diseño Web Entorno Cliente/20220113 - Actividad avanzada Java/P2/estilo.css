@@ -1,3 +1,8 @@
+
+body{
+    background-color: grey;
+}
+
 ul{
     list-style: none;
     display: flex;
@@ -6,4 +11,43 @@ ul{
 
 #imgprincipal{
     text-align: center;
+}
+
+#cabecera{
+    background-color: black;
+}
+
+#titulo{
+    color: white;
+    display: flex;
+    justify-content: center;
+    padding: 1em;
+    font-size: 2em;
+}
+
+#principal{
+    height: 500px;
+}
+
+.imagen{
+    height: 8em;
+}
+
+.imagen:hover{
+height: 10em;
+}
+
+li{
+    padding: 2em;
+}
+
+#lineafotos{
+    background-color: #555555;
+    height: 230px;
+}
+
+#nombreAnime{
+    background-color: #555555;
+    padding: 0.5em;
+    font-size: 1.3em;
 }

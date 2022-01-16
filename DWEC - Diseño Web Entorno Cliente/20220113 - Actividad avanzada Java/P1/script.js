@@ -2,6 +2,9 @@ window.onload=init;
 
 function init(){
 
+    var letrero=document.getElementById("letrero");
+    //alert(letrero);
+
     //setear botones
     document.getElementById("casilla1").addEventListener("click",function(){
         var casilla=document.getElementById("casilla1");
@@ -56,8 +59,12 @@ function init(){
         comenzarJuego();
     })
 }
+
+
+
 var jugando = false;
 function comenzarJuego(){
+    letrero.innerHTML="Turno del Jugador 1";
     jugando = true;
     //alert("hola");
     //desabilitar boton
@@ -88,6 +95,7 @@ debugger;
                 jugador=2;
                 mapa[pos]=jugador;
                 console.log(mapa);
+                letrero.innerHTML="Turno del Jugador 1";
                 comprobar();
             }
     
@@ -100,6 +108,7 @@ debugger;
                 jugador=1;
                 mapa[pos]=jugador;
                 console.log(mapa);
+                letrero.innerHTML="Turno del Jugador 2";
                 comprobar();
             }
      
@@ -125,7 +134,8 @@ var jugadas = 0
 function comprobar(){
     jugadas++;
     if(jugadas==9){
-        alert("empate");
+        //alert("empate");
+        letrero.innerHTML="¡EMPATE!";
         finPartida();
     }else{
         //comprobar mapa
@@ -146,7 +156,8 @@ function comprobar(){
 }
 
 function ganador(gana){
-    alert("Gana el jugador: "+gana);
+    //alert("Gana el jugador: "+gana);
+    letrero.innerHTML="Gana el jugador: "+gana;
     finPartida();
 
 }
