@@ -70,8 +70,29 @@ var fecha = new Date();
 var diasMes = new Date(fecha.getFullYear(), fecha.getMonth(), 0).getDate();
 
 //realizar llenada de calendario dependiendo de los dias
-for(var cont=0;cont<diasMes;cont++){
-
+var cont =1;
+//primera fila
+for(var conta= diaSem;conta<7;conta++){
+    var x = fila.insertCell(i);
+    x.innerHTML=cont;
+    cont++;
+}
+//creamos fila2
+var a = 2;
+var fila = tabla.insertRow(a);
+var semana= 1;
+for(cont;cont<=diasMes;cont++){
+    if(semana<8){
+        var x = fila.insertCell(-1);
+        x.innerHTML=cont;
+        semana++;
+    }else{
+        cont--;
+        semana=1;
+        a++;
+        fila = tabla.insertRow(a);
+    }
+    
 }
 
 
