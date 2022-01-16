@@ -1,36 +1,4 @@
-/*
-fecha actual
-var hoy = new Date();
 
-dia de la semana
-var diaUno = new Date();
-diaUno.setDate(1);
-var diaSem = diaUno.getDay();
-
-var contenedor = document.createElement("div");
-contenedor.setAttribute("id","calendario");
-var tabla = document.createElement("table");
-contenedor.appendChild(tabla);
-tabla.setAttibute("border","1");
-var fila = tabla.insertRow(0);
-
-introducir cabecera
-var cabecera = new Array("L","M","X","J","V","S","D");
-for var(i in cabecera){
-    var cabeceraTabla=document.createElement("th");
-    var texto= document.createTextNode(cabecera[i]);
-    cabeceraTabla.appendChild(texto);
-    fila.appendChild(cabeceraTabla);
-}
-
-relleno inicial
-fila = tabla.insertRow(1);
-for(var i=0; i<diaSem; i++){
-    fila.insertCell(i);
-    ...
-}
-
-*/
 
 function imprimeCalendario(ident){
 //parte del div
@@ -94,9 +62,6 @@ for(cont;cont<=diasMes;cont++){
     }
     
 }
-
-
-
 
 document.body.appendChild(contenedor);
 }
