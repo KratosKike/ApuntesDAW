@@ -2,25 +2,7 @@ window.onload=init;
 
 function init(){
 
-    document.getElementById("partida").addEventListener("click",function(){
-
-        comenzarJuego();
-    })
-}
-
-function comenzarJuego(){
-
-    //alert("hola");
-    //desabilitar boton
-    document.getElementById("partida").disabled = true;
-    //habilitar el cuadrado
-    /*for(var i=1;i<9;i++){
-        document.getElementById("casilla"+i).addEventListener("click",function(){
-        var casilla=document.getElementById("casilla"+i);
-            jugar(casilla);
-    
-        })
-    }*/
+    //setear botones
     document.getElementById("casilla1").addEventListener("click",function(){
         var casilla=document.getElementById("casilla1");
             jugar(casilla,0);
@@ -69,36 +51,62 @@ function comenzarJuego(){
 
     
 
+    document.getElementById("partida").addEventListener("click",function(){
+
+        comenzarJuego();
+    })
+}
+var jugando = false;
+function comenzarJuego(){
+    jugando = true;
+    //alert("hola");
+    //desabilitar boton
+    document.getElementById("partida").disabled = true;
+    //habilitar el cuadrado
+    /*for(var i=1;i<9;i++){
+        document.getElementById("casilla"+i).addEventListener("click",function(){
+        var casilla=document.getElementById("casilla"+i);
+            jugar(casilla);
+    
+        })
+    }*/
+    
+
 }
 var jugador=2;
 var mapa = [0, 0, 0, 0, 0, 0, 0, 0, 0,];
 function jugar(casilla,pos){
-    if(jugador==1){//jugador 2
+debugger;
+    if(jugando){
+        if(jugador==1){//jugador 2
  
-        if(mapa[pos]!=0){
-            alert("No puedes pintar aqui");
-        }else{
-            casilla.style.backgroundColor="#FF0000";
-            jugador=2;
-            mapa[pos]=jugador;
-            console.log(mapa);
-            comprobar();
-        }
-
-    }else{//Jugador 1
-        
-        if(mapa[pos]!=0){
-            alert("No puedes pintar aqui");
-        }else{
-            casilla.style.backgroundColor="#00FF00";
-            jugador=1;
-            mapa[pos]=jugador;
-            console.log(mapa);
-            comprobar();
-        }
- 
-    }
+            if(mapa[pos]!=0){
+                alert("No puedes pintar aqui");
+            }else{
+                casilla.style.backgroundColor="#FF0000";
+                //casilla.style.background="url('img/blanco.gif')";
+                jugador=2;
+                mapa[pos]=jugador;
+                console.log(mapa);
+                comprobar();
+            }
     
+        }else{//Jugador 1
+            
+            if(mapa[pos]!=0){
+                alert("No puedes pintar aqui");
+            }else{
+                casilla.style.backgroundColor="#00FF00";
+                jugador=1;
+                mapa[pos]=jugador;
+                console.log(mapa);
+                comprobar();
+            }
+     
+        }
+    }else{
+        alert("No estas jugando");
+    }
 
 }
 
@@ -148,13 +156,18 @@ function finPartida(){
     //alert("Entrando en fin partida");
     //var casilla=document.getElementById("casilla1");
     //casilla.style.backgroundColor="grey";
-    for(var cont=1;cont<9;cont++){
+    for(var cont=1;cont<10;cont++){
         var casilla=document.getElementById("casilla"+cont);
         casilla.style.backgroundColor="grey";
+        casilla.style.backgroundImage="";
     }
     //alert(casilla);
 
     //resetear mapa;
     mapa = [0, 0, 0, 0, 0, 0, 0, 0, 0,];
     document.getElementById("partida").disabled = false;
+    jugando = false;
+    jugadas = 0;
+    jugador=2;
+   
 }
