@@ -65,6 +65,16 @@ for(var i=0; i<diaSem; i++){
 
 //fila.insertCell(6);
 
+//calcular numero de dias del mes
+var fecha = new Date();
+var diasMes = new Date(fecha.getFullYear(), fecha.getMonth(), 0).getDate();
+
+//realizar llenada de calendario dependiendo de los dias
+for(var cont=0;cont<diasMes;cont++){
+
+}
+
+
 
 
 document.body.appendChild(contenedor);
