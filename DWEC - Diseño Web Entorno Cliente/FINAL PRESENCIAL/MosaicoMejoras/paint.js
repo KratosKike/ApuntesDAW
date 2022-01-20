@@ -2,15 +2,58 @@ window.onload=init;
 
     var estado="Pausa";
     var coloreo="";
+    var arraycolores="";
+    var colorito = 1
 
-    var c1 = document.getElementsByClassName("color1");
+    
+
+
+   /* var c1 = document.getElementsByClassName("color1");
     var c2 = document.getElementsByClassName("color2");
     var c3 = document.getElementsByClassName("color3");
     var c4 = document.getElementsByClassName("color4");
     var c5 = document.getElementsByClassName("color5");
-    var c6 = document.getElementsByClassName("color6");
+    var c6 = document.getElementsByClassName("color6");*/
 
 function init(){
+
+    document.getElementById("colorP").addEventListener("click",function(){
+        //elegir color
+        var colorPicker= document.getElementById("colorPick").value;
+        alert(colorPicker);
+        debugger;
+        var color=document.getElementById("color");
+        //alert(color.classList);
+        color.style.cssText("background-color:"+colorPicker+";");
+
+    });
+
+    var tablacol = document.getElementById("paleta");
+    //var arrayColores = tablacolores.getElementsByTagName("tr");
+    var arraytr= tablacol.getElementsByTagName("tr");
+    arraycolores = arraytr[0].getElementsByTagName("td");
+    //alert(arraycolores);
+    
+    for(var a=0;a<6;a++){
+
+        //arraycolores[a].setAttribute("id","funciona");
+        arraycolores[a].addEventListener("click",function(){
+            //alert(this);
+            //alert("hola"+this.className);
+            debugger;
+            //obtener clase color
+            //alert(arraycolores[a-1].className);
+            //selectPincel(arraycolores[a],"color"+colorito);
+            //selectPincel(this,"color"+colorito);
+            selectPincel(this,this.className);
+            
+        });
+        colorito++;
+    }
+
+
+
+
     //crear tabla
     var contenedor=document.getElementById("zonadibujo");
     var tabla = document.createElement("table");
@@ -34,10 +77,11 @@ function init(){
     texto.innerHTML="Haga CLICK en cualquier celda para activar/desactivar el Pincel";
 
     //añadir funcion a los 5 botones de colores
+
     
     
     //asignar listener a los 5 colores
-    c1[0].addEventListener("click",function(){
+    /*c1[0].addEventListener("click",function(){
         selectPincel(c1[0],"color1");
     },false)
     c2[0].addEventListener("click",function(){
@@ -54,7 +98,7 @@ function init(){
     },false)
     c6[0].addEventListener("click",function(){
         selectPincel(c6[0],"color6");
-    },false)
+    },false)*/
 
     habilitarTabla();
 
@@ -62,23 +106,33 @@ function init(){
 
 function selectPincel(cuadro,color){
     debugger;
+    var colorFinal=color.split(" ");
+    //alert(colorFinal[0]);
     //quitar seleccionado a los demas colores
     quitarseleccionado();
     //aplicar seleccionado al cuadro
     //cuadro.setAttribute("class","seleccionado");
     cuadro.className=color+" seleccionado";
     cambiarApuntado();
-    coloreo=color;
+    coloreo=colorFinal[0];
     
 }
 
 function quitarseleccionado(){
-    c1[0].className="color1";
+    var coloriito=1;
+
+    for(var a=0;a<6;a++){
+        arraycolores[a].className="color"+coloriito;
+        coloriito++;
+    }
+
+
+    /*c1[0].className="color1";
     c2[0].className="color2";
     c3[0].className="color3";
     c4[0].className="color4";
     c5[0].className="color5";
-    c6[0].className="color6";
+    c6[0].className="color6";*/
 }
 
 function cambiarApuntado(){
