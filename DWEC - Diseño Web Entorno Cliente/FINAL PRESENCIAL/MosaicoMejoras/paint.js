@@ -5,19 +5,10 @@ window.onload=init;
     var arraycolores="";
     var colorito = 1
 
-    
-
-
-   /* var c1 = document.getElementsByClassName("color1");
-    var c2 = document.getElementsByClassName("color2");
-    var c3 = document.getElementsByClassName("color3");
-    var c4 = document.getElementsByClassName("color4");
-    var c5 = document.getElementsByClassName("color5");
-    var c6 = document.getElementsByClassName("color6");*/
 
 function init(){
 
-    document.getElementById("colorP").addEventListener("click",function(){
+    /*document.getElementById("colorP").addEventListener("click",function(){
         //elegir color
         var colorPicker= document.getElementById("colorPick").value;
         alert(colorPicker);
@@ -26,6 +17,11 @@ function init(){
         //alert(color.classList);
         color.style.cssText("background-color:"+colorPicker+";");
 
+    });*/
+
+    //boton borrado
+    document.getElementById("borrar").addEventListener("click",function(){
+        borrar();
     });
 
     var tablacol = document.getElementById("paleta");
@@ -36,15 +32,10 @@ function init(){
     
     for(var a=0;a<6;a++){
 
-        //arraycolores[a].setAttribute("id","funciona");
         arraycolores[a].addEventListener("click",function(){
-            //alert(this);
-            //alert("hola"+this.className);
             debugger;
             //obtener clase color
-            //alert(arraycolores[a-1].className);
-            //selectPincel(arraycolores[a],"color"+colorito);
-            //selectPincel(this,"color"+colorito);
+
             selectPincel(this,this.className);
             
         });
@@ -78,27 +69,7 @@ function init(){
 
     //añadir funcion a los 5 botones de colores
 
-    
-    
-    //asignar listener a los 5 colores
-    /*c1[0].addEventListener("click",function(){
-        selectPincel(c1[0],"color1");
-    },false)
-    c2[0].addEventListener("click",function(){
-        selectPincel(c2[0],"color2");
-    },false)
-    c3[0].addEventListener("click",function(){
-        selectPincel(c3[0],"color3");
-    },false)
-    c4[0].addEventListener("click",function(){
-        selectPincel(c4[0],"color4");
-    },false)
-    c5[0].addEventListener("click",function(){
-        selectPincel(c5[0],"color5");
-    },false)
-    c6[0].addEventListener("click",function(){
-        selectPincel(c6[0],"color6");
-    },false)*/
+
 
     habilitarTabla();
 
@@ -107,11 +78,11 @@ function init(){
 function selectPincel(cuadro,color){
     debugger;
     var colorFinal=color.split(" ");
-    //alert(colorFinal[0]);
+  
     //quitar seleccionado a los demas colores
     quitarseleccionado();
     //aplicar seleccionado al cuadro
-    //cuadro.setAttribute("class","seleccionado");
+   
     cuadro.className=color+" seleccionado";
     cambiarApuntado();
     coloreo=colorFinal[0];
@@ -127,12 +98,7 @@ function quitarseleccionado(){
     }
 
 
-    /*c1[0].className="color1";
-    c2[0].className="color2";
-    c3[0].className="color3";
-    c4[0].className="color4";
-    c5[0].className="color5";
-    c6[0].className="color6";*/
+
 }
 
 function cambiarApuntado(){
@@ -172,4 +138,15 @@ function pintar(yo){
         yo.className=coloreo;
     }
 
+}
+
+function borrar(){
+    //seleccionar celdas
+    var tabla = document.getElementsByClassName("tablerodibujo");
+    var celdas = tabla[0].getElementsByTagName("td");
+    
+    //recoccer celdas
+    for(var cont=0;cont<celdas.length;cont++){
+        celdas[cont].className="";
+    }
 }
