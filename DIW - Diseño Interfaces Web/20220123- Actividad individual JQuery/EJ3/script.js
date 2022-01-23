@@ -1,0 +1,50 @@
+$(document).ready(function(){
+    var homer=1,marge=1,bart=1,lisa=1,maggie=1;
+
+    $("#homer").click(function(){
+        
+        if(homer==0){
+            $("#homerParrafo").slideDown(1000);
+            homer=1;
+        }else{
+            $("#homerParrafo").css("display","none");
+            homer=0;
+        }
+    })
+    $("#marge").click(function(){
+        if(marge==0){
+            $("#margeParrafo").fadeIn(1000);
+            marge=1;
+        }else{
+            $("#margeParrafo").slideUp(1000);
+            marge=0;
+        }
+    })
+    $("#bart").click(function(){
+        if(bart==0){
+            $("#bartParrafo").css("display","block");
+            bart=1;
+        }else{
+            $("#bartParrafo").hide(1000);
+            bart=0;
+        }
+    })
+    $("#lisa").click(function(){
+        if(lisa==0){
+            $("#lisaParrafo").slideDown(1000);
+            lisa=1;
+        }else{
+            $("#lisaParrafo").fadeOut(1000);
+            lisa=0;
+        }
+    })
+    $("#maggie").click(function(){
+        if(maggie==0){
+            $("#maggieParrafo").show(1000);
+            maggie=1;
+        }else{
+            $("#maggieParrafo").slideUp(1000);
+            maggie=0;
+        }
+    })
+});

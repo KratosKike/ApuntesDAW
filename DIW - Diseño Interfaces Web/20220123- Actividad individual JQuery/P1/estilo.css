@@ -1,0 +1,41 @@
+.casilla{
+    width: 6em;
+    height: 6em;
+    border: 1px solid black;
+    
+    justify-content: center;
+    align-items: center;
+    background-color: grey;
+}
+#titulo{
+    color: white;
+    display: flex;
+    justify-content: center;
+    font-size: 2em;
+}
+
+#tablero{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    gap: 0;
+    justify-content: center;
+}
+
+body{
+    background-color: cadetblue;
+    margin: 0px;
+}
+
+#cabecera{
+    background-color: black;
+    
+    margin-bottom: 2em;
+}
+
+#estado{
+    text-align: center;
+}
+
+#partida{
+    margin-bottom: 1em;
+}
