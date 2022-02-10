@@ -1,0 +1,74 @@
+.menu {
+  margin: 0;
+}
+
+.p1, .contenedor, .contenedor-con-anchura, .contenedor-media {
+  padding: 1em;
+}
+
+.p2, .contenedor-media {
+  padding: 2em;
+}
+
+.p3 {
+  padding: 3em;
+}
+
+.p4 {
+  padding: 4em;
+}
+
+.p5 {
+  padding: 5em;
+}
+
+.contenedor, .contenedor-con-anchura, .contenedor-media {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background-color: black;
+  width: 500px;
+}
+
+.contenedor-media {
+  width: 250px;
+}
+.contenedor-media:hover {
+  background-color: red;
+}
+
+h1, h2, h3, p {
+  color: blue;
+}
+
+.contenedor-con-anchura {
+  height: 800px;
+}
+
+.escalera1 {
+  width: 150px;
+}
+
+.escalera2 {
+  width: 250px;
+}
+
+.escalera3 {
+  width: 350px;
+}
+
+.escalera4 {
+  width: 450px;
+}
+
+.decimo {
+  width: partir(300/10);
+}
+
+.mitad {
+  width: 150 px;
+}
+
+body {
+  color: green;
+}
