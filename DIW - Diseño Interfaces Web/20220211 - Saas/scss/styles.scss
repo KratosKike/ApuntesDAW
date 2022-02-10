@@ -1,0 +1,73 @@
+//contador variables 5
+//contador selecotres 5
+//contador funciones 1
+//contador operaciones 1
+//contador mixins 1
+//contador bucles 1
+//contador includes 1
+
+@import "components/margen.scss";
+@import "components/padding.scss";
+
+@mixin fondoNegro{
+    background-color: black;
+}
+
+@function mitad($entrada){
+    @return $entrada/2;
+}
+
+$azul : blue;
+$rojo: red;
+$altura : 800px;
+$flexible : flex;
+$ancho: 500px;
+
+.contenedor{
+    display: $flexible;
+    @extend .p1;
+    @include fondoNegro;
+    width: $ancho;
+}
+
+.contenedor-media{
+    @extend .contenedor;
+    @extend .p2;
+    width: mitad($ancho);
+    &:hover{
+        background-color: $rojo;
+    }
+}
+
+h1,h2,h3,p{
+    color : $azul;
+}
+
+
+.contenedor-con-anchura{
+    @extend .contenedor;
+    height: $altura;
+}
+
+@function pow($base, $exponent) {
+    @return ($tam/$exponent);
+}
+
+@for $i from 1 to 5 {
+    .escalera#{$i}{
+        $calculo : #{$i}+50+px;
+        width : $calculo;
+    }
+}
+
+.decimo{
+    width: partir(300/10);
+}
+
+.mitad{
+    width: (300/2)px;
+}
+
+body{
+    color : green;
+}
