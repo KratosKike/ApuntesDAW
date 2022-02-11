@@ -1,20 +1,67 @@
-//contador variables 5
-//contador selecotres 5
-//contador funciones 1
-//contador operaciones 1
-//contador mixins 1
-//contador bucles 1
-//contador includes 1
 
 @import "components/margen.scss";
 @import "components/padding.scss";
+
+@mixin contenedortalba{
+    display: flex;
+    align-content: stretch;
+    justify-content: space-evenly;
+}
+    
+@mixin colortexto{
+    color:red;
+}
 
 @mixin fondoNegro{
     background-color: black;
 }
 
+@mixin contenedor{
+    border: 2px solid rebeccapurple;
+    padding: .5em;
+}
+
 @function mitad($entrada){
     @return $entrada/2;
+}
+@function doble($entrada){
+    @return $entrada*2;
+}
+
+@function añade100($num){
+    @return $num*100;
+}
+
+@function porcentaje($num){
+    @return $num/100;
+}
+
+
+
+@mixin paddingLateral{
+    padding-left: 3em;
+    padding-right: 3em;
+}
+
+@mixin mitadAltura {
+    .mitad{
+        width: doble($altura);
+    }
+}
+
+@for $fuente from 10 to 20 {
+    .fuente#{$fuente}{
+        padding : doble(3em);
+        font-size: ($fuente * 1px);
+    }
+}
+
+@for $modelo from 1 to 6 {
+    .modelo#{$modelo}{
+        padding : doble(3em);
+        width: añade100($modelo);
+
+    }
 }
 
 $azul : blue;
@@ -23,11 +70,18 @@ $altura : 800px;
 $flexible : flex;
 $ancho: 500px;
 
+table{
+    @include contenedortalba;
+    @include colortexto;
+}
+
+
 .contenedor{
     display: $flexible;
     @extend .p1;
     @include fondoNegro;
     width: $ancho;
+    @include contenedor;
 }
 
 .contenedor-media{
@@ -36,6 +90,7 @@ $ancho: 500px;
     width: mitad($ancho);
     &:hover{
         background-color: $rojo;
+        width: porcentaje(50) *1%;
     }
 }
 
@@ -59,6 +114,14 @@ h1,h2,h3,p{
         width : $calculo;
     }
 }
+$colores: #0f5,orange,#a64,blue, white;
+$cont: 1;
+@for $cont from 1 to 5 {
+    .col#{$cont}{
+        @include paddingLateral;
+        background-color: nth($colores, $cont);
+    }
+}
 
 .decimo{
     width: partir(300/10);
@@ -71,3 +134,5 @@ h1,h2,h3,p{
 body{
     color : green;
 }
+
+

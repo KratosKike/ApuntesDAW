@@ -22,12 +22,101 @@
   padding: 5em;
 }
 
+.fuente10 {
+  padding: 6em;
+  font-size: 10px;
+}
+
+.fuente11 {
+  padding: 6em;
+  font-size: 11px;
+}
+
+.fuente12 {
+  padding: 6em;
+  font-size: 12px;
+}
+
+.fuente13 {
+  padding: 6em;
+  font-size: 13px;
+}
+
+.fuente14 {
+  padding: 6em;
+  font-size: 14px;
+}
+
+.fuente15 {
+  padding: 6em;
+  font-size: 15px;
+}
+
+.fuente16 {
+  padding: 6em;
+  font-size: 16px;
+}
+
+.fuente17 {
+  padding: 6em;
+  font-size: 17px;
+}
+
+.fuente18 {
+  padding: 6em;
+  font-size: 18px;
+}
+
+.fuente19 {
+  padding: 6em;
+  font-size: 19px;
+}
+
+.modelo1 {
+  padding: 6em;
+  width: 100;
+}
+
+.modelo2 {
+  padding: 6em;
+  width: 200;
+}
+
+.modelo3 {
+  padding: 6em;
+  width: 300;
+}
+
+.modelo4 {
+  padding: 6em;
+  width: 400;
+}
+
+.modelo5 {
+  padding: 6em;
+  width: 500;
+}
+
+table {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-line-pack: stretch;
+      align-content: stretch;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  color: red;
+}
+
 .contenedor, .contenedor-con-anchura, .contenedor-media {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   background-color: black;
   width: 500px;
+  border: 2px solid rebeccapurple;
+  padding: 0.5em;
 }
 
 .contenedor-media {
@@ -35,6 +124,7 @@
 }
 .contenedor-media:hover {
   background-color: red;
+  width: 0.5%;
 }
 
 h1, h2, h3, p {
@@ -59,6 +149,30 @@ h1, h2, h3, p {
 
 .escalera4 {
   width: 450px;
+}
+
+.col1 {
+  padding-left: 3em;
+  padding-right: 3em;
+  background-color: #0f5;
+}
+
+.col2 {
+  padding-left: 3em;
+  padding-right: 3em;
+  background-color: orange;
+}
+
+.col3 {
+  padding-left: 3em;
+  padding-right: 3em;
+  background-color: #a64;
+}
+
+.col4 {
+  padding-left: 3em;
+  padding-right: 3em;
+  background-color: blue;
 }
 
 .decimo {
