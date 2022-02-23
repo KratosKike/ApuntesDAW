@@ -1,5 +1,5 @@
 //comprobar que haya sesion
-
+//
 
 
 function initRegistro(){
@@ -70,6 +70,7 @@ function initRegistro(){
             
             var usuario={"id":arrayUsuarios.length,"user":nombre,"pass":pass,"email":email}
             localStorage.setItem(arrayUsuarios.length, JSON.stringify(usuario));
+            
      
         }else{
             evento.preventDefault();

@@ -1,0 +1,10 @@
+td:nth-child(4){
+    text-align: right;
+}
+th:nth-child(4){
+    text-align: right;
+}
+
+#derecha{
+    text-align: right;
+}
