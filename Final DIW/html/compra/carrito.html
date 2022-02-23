@@ -18,36 +18,36 @@
       <!--Cabecera-->
     <header class="p-3 bg-dark">
       
-        <div class="d-flex align-items-center">
-          <a href="/Final DIW/index.html"><img class="pe-3" height="60" src="/Final DIW/img/logo2.png" alt=""></a>
-          <h3 class="text-white me-lg-auto ">Digicard Marketplace</h3>
-          <div class="text-end" id="botones">
-            <a href="/Final DIW/html/login/login.html"><button type="button" class="btn btn-outline-light me-2">Loguearse</button></a>
-            <a href="/Final DIW/html/login/registro.html"><button type="button" class="btn btn-warning">Registrarse</button></a>
-          </div>
-          <div class="text-end" id="loginUser" style="display: none;">
-            <h5 class="text-white" id="usuario"></h5>
-            <a href="/Final DIW/html/compra/carrito.html"><button type="button" class="btn btn-outline-light me-2"><i class="bi bi-cart-fill"></i>
-            </button></a>
-            <Button class="btn btn-warning" id="cerrarsesion">Cerrar sesion</Button>
-          </div>
+      <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+        <a href="/Final DIW/index.html"><img class="pe-3" height="60" src="/Final DIW/img/logo2.png" alt=""></a>
+        <h3 class="text-white me-lg-auto ">Digicard Marketplace</h3>
+        <form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3">
+          <input type="search" class="form-control form-control-dark" placeholder="Busqueda" aria-label="Search">
+        </form>
+        <div class="text-end" id="botones">
+          <a href="/Final DIW/html/login/login.html"><button type="button" class="btn btn-outline-light me-2">Loguearse</button></a>
+          <a href="/Final DIW/html/login/registro.html"><button type="button" class="btn btn-warning">Registrarse</button></a>
         </div>
-    </header>
-    <!--Fin Cabecera-->
+
+
+        <div class="text-end" id="loginUser" style="display: none;">
+          <h5 class="text-white" id="usuario"></h5>
+          <a href="/Final DIW/html/compra/carrito.html"><button type="button" class="btn btn-outline-light me-2"><i class="bi bi-cart-fill"></i>
+          </button></a>
+          <Button class="btn btn-warning" id="cerrarsesion">Cerrar sesion</Button>
+        </div>
+      </div>
+  </header>
+  <!--Fin Cabecera-->
 
     <!--Contenedor principal-->
-    <div class="container">
-        <!--Div vendedor1-->
+    <div class="container ">
 
-        <div class="m-3">
-            <h2>Vendedor: Antonio</h2>
-            <h3>Contenido:</h3>
-            <table class="table">
-              <tr class="bg-success"><th></th><th>Numero</th><th>Carta</th><th>Precio</th></tr>
-              <tr><td><a data-toggle="1"><i class="bi bi-camera"></i></a></td><td>001</td><td><a class="pe-auto" href="/Final DIW/html/carta/carta.html">Canela</td><td>1 €</td></tr>
+      <div class="row">
+        <!--Div vendedores-->
+      <div class="col-8">
 
-            </table>
-        </div>
+        
         <div class="m-3">
           <h2>Vendedor: Antonio</h2>
           <h3>Contenido:</h3>
@@ -66,12 +66,44 @@
 
         </table>
         </div>
+        <div class="m-3">
+          <h2>Vendedor: Antonio</h2>
+          <h3>Contenido:</h3>
+          <table class="table">
+            <tr class="bg-success"><th></th><th>Numero</th><th>Carta</th><th>Precio</th></tr>
+            <tr><td><a data-toggle="1"><i class="bi bi-camera"></i></a></td><td>001</td><td><a class="pe-auto" href="/Final DIW/html/carta/carta.html">Canela</td><td>1 €</td></tr>
+
+          </table>
+        </div>
+
+      </div>
+      <!--Div total-->
+      <div class="col-lg-4 col-md-12">
+        
+        <div class="p-3 text-center">
+          <div class="card" style="width: 18rem;">
+            <div class="card-body">
+              <h5 class="card-title">Total Compra</h5>
+              <p class="card-text">
+                Valor: 3€
+              </p>
+              <p class="card-text">
+                Envio: 4€
+              </p>
+              <a href="/Final DIW/index.html"><button class="btn btn-warning">Comprar</button></a>
+            </div>
+          </div>
+          
+        </div>
+      </div>
+        <!--Div vendedor1-->
+
+      </div>
+
       
     </div>
     <!--Fin contenedor principal-->
-    <div class="p-3 text-center">
-      <a href="/Final DIW/index.html"><button class="btn btn-warning">Comprar</button></a>
-    </div>
+    
     
 
     <!--Inicio Footer-->
